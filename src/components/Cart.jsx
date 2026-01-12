@@ -7,10 +7,12 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
 
         Object.values(cartItems).forEach(item => {
             const variantStr = item.variant ? `(${item.variant})` : '';
-            message += `- ${item.name} ${variantStr} x ${item.quantity} = ₹${item.price * item.quantity}\n`;
+            const spicyStr = item.spicyLevel ? `[${item.spicyLevel}]` : '';
+            message += `- ${item.name} ${variantStr} ${spicyStr} x ${item.quantity} = ₹${item.price * item.quantity}\n`;
         });
 
         message += `\n*Total Amount: ₹${total}*`;
+        message += `\n_(Delivery charges applicable)_`;
         message += `\n\nPlease confirm my order.`;
 
         const encodedMessage = encodeURIComponent(message);
@@ -68,6 +70,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
                                             <p className="font-bold text-brand-dark">{item.name}</p>
                                         </div>
                                         {item.variant && <p className="text-xs text-gray-500 ml-5">{item.variant}</p>}
+                                        {item.spicyLevel && <p className="text-xs text-orange-600 ml-5">Spicy: {item.spicyLevel}</p>}
                                         <p className="text-sm text-gray-600 ml-5">₹{item.price} x {item.quantity}</p>
                                     </div>
                                     <div className="flex items-center gap-4">
@@ -92,6 +95,9 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
                                     <span>Total Amount</span>
                                     <span>₹{total}</span>
                                 </div>
+                                <p className="text-xs text-brand-red text-right mt-1 italic">
+                                    Delivery charges applicable.
+                                </p>
                             </div>
                         </div>
 

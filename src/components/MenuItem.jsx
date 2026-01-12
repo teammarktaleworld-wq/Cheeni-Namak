@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 
 const MenuItem = ({ item, cart, addToCart, removeFromCart }) => {
     const [selectedVariant, setSelectedVariant] = useState(item.variants && item.variants.length > 0 ? item.variants[0] : null);
+    const [spicyLevel, setSpicyLevel] = useState('Medium');
 
     const getQuantity = () => {
         let key = item.id;
         if (selectedVariant) {
-            key = `${item.id}-${selectedVariant.name}`;
+            key = `${key}-${selectedVariant.name}`;
+        }
+        if (item.hasSpicyOption) {
+            key = `${key}-${spicyLevel}`;
         }
         return cart[key] ? cart[key].quantity : 0;
     };
@@ -20,11 +24,18 @@ const MenuItem = ({ item, cart, addToCart, removeFromCart }) => {
         if (selectedVariant) {
             variantName = selectedVariant.name;
             price = selectedVariant.price;
-            id = `${item.id}-${selectedVariant.name}`;
-            productToAdd = { ...productToAdd, variant: variantName, price: price, id: id, baseId: item.id };
+            id = `${id}-${variantName}`;
+            productToAdd = { ...productToAdd, variant: variantName, price: price };
         } else {
             // Single price item
             productToAdd = { ...productToAdd, price: item.price };
+        }
+
+        if (item.hasSpicyOption) {
+            id = `${id}-${spicyLevel}`;
+            productToAdd = { ...productToAdd, spicyLevel: spicyLevel, id: id, baseId: item.id };
+        } else {
+            productToAdd = { ...productToAdd, id: id, baseId: item.id };
         }
 
         addToCart(productToAdd);
@@ -33,7 +44,10 @@ const MenuItem = ({ item, cart, addToCart, removeFromCart }) => {
     const handleRemove = () => {
         let id = item.id;
         if (selectedVariant) {
-            id = `${item.id}-${selectedVariant.name}`;
+            id = `${id}-${selectedVariant.name}`;
+        }
+        if (item.hasSpicyOption) {
+            id = `${id}-${spicyLevel}`;
         }
         removeFromCart(id);
     };
@@ -78,8 +92,8 @@ const MenuItem = ({ item, cart, addToCart, removeFromCart }) => {
                                 key={variant.name}
                                 onClick={() => setSelectedVariant(variant)}
                                 className={`text-xs px-3 py-1 rounded-full border transition-colors ${selectedVariant && selectedVariant.name === variant.name
-                                        ? 'bg-brand-red text-white border-brand-red'
-                                        : 'bg-white text-gray-600 border-gray-300 hover:border-brand-red'
+                                    ? 'bg-brand-red text-white border-brand-red'
+                                    : 'bg-white text-gray-600 border-gray-300 hover:border-brand-red'
                                     }`}
                             >
                                 {variant.name}
@@ -87,6 +101,26 @@ const MenuItem = ({ item, cart, addToCart, removeFromCart }) => {
                         ))}
                     </div>
                 ) : null}
+
+                {item.hasSpicyOption && (
+                    <div className="mt-3">
+                        <p className="text-xs text-brand-dark/60 font-medium mb-1 uppercase tracking-wider">Spicy Level:</p>
+                        <div className="flex flex-wrap gap-2">
+                            {['Low', 'Medium', 'Full Spicy'].map((level) => (
+                                <button
+                                    key={level}
+                                    onClick={() => setSpicyLevel(level)}
+                                    className={`text-xs px-3 py-1 rounded-full border transition-colors ${spicyLevel === level
+                                        ? 'bg-orange-500 text-white border-orange-500'
+                                        : 'bg-white text-gray-600 border-gray-300 hover:border-orange-500'
+                                        }`}
+                                >
+                                    {level}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
 
             <div className="mt-4 flex items-center justify-between">

@@ -16,7 +16,8 @@ export const MENU_ITEMS = [
             { name: 'Half', price: 90 },
             { name: 'Full', price: 160 }
         ],
-        isVeg: true
+        isVeg: true,
+        hasSpicyOption: true
     },
     {
         id: 'rajma',
@@ -26,7 +27,8 @@ export const MENU_ITEMS = [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
-        isVeg: true
+        isVeg: true,
+        hasSpicyOption: true
     },
     {
         id: 'dal-tadka',
@@ -36,7 +38,8 @@ export const MENU_ITEMS = [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
-        isVeg: true
+        isVeg: true,
+        hasSpicyOption: true
     },
     {
         id: 'chole',
@@ -46,7 +49,8 @@ export const MENU_ITEMS = [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
-        isVeg: true
+        isVeg: true,
+        hasSpicyOption: true
     },
     {
         id: 'kadhi-pakoda',
@@ -56,7 +60,8 @@ export const MENU_ITEMS = [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
-        isVeg: true
+        isVeg: true,
+        hasSpicyOption: true
     },
     {
         id: 'paneer-bhurji',
@@ -66,7 +71,8 @@ export const MENU_ITEMS = [
             { name: 'Half', price: 100 },
             { name: 'Full', price: 180 }
         ],
-        isVeg: true
+        isVeg: true,
+        hasSpicyOption: true
     },
 
     // Main Course (Non-Veg)
@@ -79,7 +85,8 @@ export const MENU_ITEMS = [
             { name: '4 pcs', price: 160 },
             { name: '8 pcs', price: 300 }
         ],
-        isVeg: false
+        isVeg: false,
+        hasSpicyOption: true
     },
     {
         id: 'butter-chicken',
@@ -90,7 +97,20 @@ export const MENU_ITEMS = [
             { name: '4 pcs', price: 180 },
             { name: '8 pcs', price: 330 }
         ],
-        isVeg: false
+        isVeg: false,
+        hasSpicyOption: true
+    },
+    {
+        id: 'handi-chicken',
+        name: 'Handi Chicken',
+        category: 'Main Course (Non-Veg)',
+        variants: [
+            { name: '3 pcs', price: 150 },
+            { name: '6 pcs', price: 270 },
+            { name: '9 pcs', price: 510 }
+        ],
+        isVeg: false,
+        hasSpicyOption: true
     },
     {
         id: 'egg-curry',
@@ -100,7 +120,8 @@ export const MENU_ITEMS = [
             { name: '2 Eggs', price: 60 },
             { name: '4 Eggs', price: 110 }
         ],
-        isVeg: false
+        isVeg: false,
+        hasSpicyOption: true
     },
     {
         id: 'egg-bhurji',
@@ -110,16 +131,20 @@ export const MENU_ITEMS = [
             { name: 'Half', price: 70 },
             { name: 'Full', price: 120 }
         ],
-        isVeg: false
+        isVeg: false,
+        hasSpicyOption: true
     },
     {
-        id: 'mutton',
-        name: 'Mutton',
+        id: 'handi-mutton',
+        name: 'Handi Mutton',
         category: 'Main Course (Non-Veg)',
-        variants: [],
-        priceDisplay: 'On Call / On Demand',
+        variants: [
+            { name: '3 pcs', price: 350 },
+            { name: '6 pcs', price: 650 },
+            { name: '9 pcs', price: 1050 }
+        ],
         isVeg: false,
-        availableScript: false // Special handling
+        hasSpicyOption: true
     },
 
     // Soups & Sides
@@ -192,28 +217,44 @@ export const MENU_ITEMS = [
         id: 'tawa-roti',
         name: 'Tawa Roti',
         category: 'Breads',
-        price: 8,
+        variants: [
+            { name: 'Plain', price: 8 },
+            { name: 'Butter', price: 12 },
+            { name: 'Ghee', price: 12 }
+        ],
         isVeg: true
     },
     {
         id: 'plain-paratha',
         name: 'Plain Paratha',
         category: 'Breads',
-        price: 15,
+        variants: [
+            { name: 'Plain', price: 15 },
+            { name: 'Butter', price: 19 },
+            { name: 'Ghee', price: 19 }
+        ],
         isVeg: true
     },
     {
         id: 'pyaz-paratha',
         name: 'Pyaz Paratha',
         category: 'Breads',
-        price: 30,
+        variants: [
+            { name: 'Plain', price: 30 },
+            { name: 'Butter', price: 34 },
+            { name: 'Ghee', price: 34 }
+        ],
         isVeg: true
     },
     {
         id: 'aloo-pyaz-paratha',
         name: 'Aloo Pyaz Paratha',
         category: 'Breads',
-        price: 35,
+        variants: [
+            { name: 'Plain', price: 35 },
+            { name: 'Butter', price: 39 },
+            { name: 'Ghee', price: 39 }
+        ],
         isVeg: true
     },
     {
