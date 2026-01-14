@@ -1,6 +1,80 @@
 import React, { useState } from 'react';
 
 const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
+    const [couponCode, setCouponCode] = useState('');
+    const [appliedCoupon, setAppliedCoupon] = useState(null);
+    const [distance, setDistance] = useState('');
+    const [isLocating, setIsLocating] = useState(false);
+    const [locationError, setLocationError] = useState('');
+
+    // Restaurant Coordinates (Sec 14, Dwarka, New Delhi)
+    const RESTAURANT_COORDS = { lat: 28.5983, lng: 77.0326 };
+
+    const calculateDistance = (lat1, lon1, lat2, lon2) => {
+        const R = 6371; // Radius of the earth in km
+        const dLat = deg2rad(lat2 - lat1);
+        const dLon = deg2rad(lon2 - lon1);
+        const a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        const d = R * c; // Distance in km
+        return d;
+    };
+
+    const deg2rad = (deg) => {
+        return deg * (Math.PI / 180);
+    };
+
+    const handleLocateMe = () => {
+        setIsLocating(true);
+        setLocationError('');
+
+        if (!navigator.geolocation) {
+            setLocationError('Geolocation is not supported by your browser.');
+            setIsLocating(false);
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const userLat = position.coords.latitude;
+                const userLng = position.coords.longitude;
+                const distKm = calculateDistance(RESTAURANT_COORDS.lat, RESTAURANT_COORDS.lng, userLat, userLng);
+
+                // Adding a small buffer (1.2x) to account for road curvature vs straight line
+                const roadDistanceEst = (distKm * 1.2).toFixed(1);
+
+                setDistance(roadDistanceEst);
+                setIsLocating(false);
+            },
+            (error) => {
+                console.error("Error fetching location:", error);
+                setLocationError('Unable to retrieve location. Please enter manually.');
+                setIsLocating(false);
+            }
+        );
+    };
+
+    const deliveryCharge = (() => {
+        const dist = parseFloat(distance);
+        if (isNaN(dist) || dist <= 5) return 0;
+        return Math.ceil((dist - 5) * 10);
+    })();
+
+    const discountAmount = appliedCoupon === 'CN10' ? Math.round(total * 0.1) : 0;
+    const finalTotal = total - discountAmount + deliveryCharge;
+
+    const handleApplyCoupon = () => {
+        if (couponCode.toUpperCase() === 'CN10') {
+            setAppliedCoupon('CN10');
+        } else {
+            alert('Invalid Coupon Code');
+            setAppliedCoupon(null);
+        }
+    };
+
     const generateWhatsAppLink = () => {
         const phoneNumber = "919667334797";
         let message = "Namaste Cheeni Namak! I would like to place an order:\n\n";
@@ -11,8 +85,12 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
             message += `- ${item.name} ${variantStr} ${spicyStr} x ${item.quantity} = ₹${item.price * item.quantity}\n`;
         });
 
-        message += `\n*Total Amount: ₹${total}*`;
-        message += `\n_(Delivery charges applicable)_`;
+        message += `\n*Subtotal: ₹${total}*`;
+        if (discountAmount > 0) {
+            message += `\n*Discount (CN10): -₹${discountAmount}*`;
+        }
+        message += `\n*Delivery Charge (${distance || 0} km): ₹${deliveryCharge}*`;
+        message += `\n*Total Amount: ₹${finalTotal}*`;
         message += `\n\nPlease confirm my order.`;
 
         const encodedMessage = encodeURIComponent(message);
@@ -31,7 +109,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
             {/* Floating Bottom Bar (Mobile/Desktop Quick View) */}
             {showFloatingBar && (
                 <div className="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white via-white to-transparent z-40 pointer-events-none">
-                    <div className="container mx-auto pointer-events-auto">
+                    <div className="container mx-auto pointer-events-auto max-w-md">
                         <button
                             onClick={onClose}
                             className="w-full bg-brand-red text-white py-3 px-6 rounded-xl shadow-lg flex justify-between items-center font-bold text-lg animate-bounce-subtle"
@@ -50,9 +128,9 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
 
             {/* Cart Modal */}
             {isOpen && (
-                <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 backdrop-blur-sm p-0 sm:p-4">
-                    <div className="bg-white w-full max-w-md rounded-t-2xl sm:rounded-2xl max-h-[80vh] flex flex-col shadow-2xl animate-slide-up">
-                        <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-brand-beige rounded-t-2xl">
+                <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-0 sm:p-4">
+                    <div className="bg-white w-full max-w-md rounded-t-2xl sm:rounded-2xl max-h-[90vh] flex flex-col shadow-2xl animate-slide-up">
+                        <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-brand-beige rounded-t-2xl sticky top-0 z-10">
                             <h2 className="text-xl font-serif font-bold text-brand-dark">Your Order</h2>
                             <button onClick={onClose} className="p-2 text-gray-500 hover:text-brand-red">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
@@ -63,7 +141,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
 
                         <div className="overflow-y-auto p-4 flex-1">
                             {Object.values(cartItems).map((item) => (
-                                <div key={item.id} className="flex justify-between items-center py-3 border-b border-gray-50 last:border-0 relative group">
+                                <div key={item.id} className="flex justify-between items-center py-4 border-b border-gray-50 last:border-0 relative group">
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2">
                                             <div className={`w-3 h-3 rounded-full ${item.isVeg ? 'bg-green-600' : 'bg-red-600'}`}></div>
@@ -90,18 +168,110 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
                                 </div>
                             ))}
 
-                            <div className="mt-4 pt-4 border-t border-dashed border-gray-300">
-                                <div className="flex justify-between items-center text-lg font-bold text-brand-dark">
-                                    <span>Total Amount</span>
+                            <div className="mt-6 space-y-4">
+                                {/* Delivery Section */}
+                                <div className="bg-gray-50 p-3 rounded-lg">
+                                    <label className="block text-sm font-bold text-brand-dark mb-1">
+                                        Delivery Distance (km)
+                                    </label>
+                                    <div className="flex gap-2">
+                                        <input
+                                            type="number"
+                                            value={distance}
+                                            onChange={(e) => setDistance(e.target.value)}
+                                            placeholder="Ex: 6"
+                                            className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand-red"
+                                            min="0"
+                                            step="0.1"
+                                        />
+                                        <button
+                                            onClick={handleLocateMe}
+                                            disabled={isLocating}
+                                            className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-bold hover:bg-blue-700 disabled:bg-blue-300 flex items-center gap-1"
+                                        >
+                                            {isLocating ? (
+                                                <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                </svg>
+                                            ) : (
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                                                    <path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
+                                                </svg>
+                                            )}
+                                            {isLocating ? 'Locating...' : 'Locate'}
+                                        </button>
+                                    </div>
+                                    {locationError ? (
+                                        <p className="text-xs text-red-500 mt-1">{locationError}</p>
+                                    ) : (
+                                        <p className="text-[10px] text-gray-500 mt-1">
+                                            Free under 5km. ₹10/km for extra distance.
+                                        </p>
+                                    )}
+                                </div>
+
+                                {/* Coupon Section */}
+                                <div className="bg-gray-50 p-3 rounded-lg">
+                                    <label className="block text-sm font-bold text-brand-dark mb-1">
+                                        Coupon Code
+                                    </label>
+                                    <div className="flex gap-2">
+                                        <input
+                                            type="text"
+                                            value={couponCode}
+                                            onChange={(e) => setCouponCode(e.target.value)}
+                                            placeholder="Enter code"
+                                            className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand-red uppercase"
+                                            disabled={!!appliedCoupon}
+                                        />
+                                        {appliedCoupon ? (
+                                            <button
+                                                onClick={() => { setAppliedCoupon(null); setCouponCode(''); }}
+                                                className="bg-gray-200 text-gray-600 px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-300"
+                                            >
+                                                Remove
+                                            </button>
+                                        ) : (
+                                            <button
+                                                onClick={handleApplyCoupon}
+                                                className="bg-brand-dark text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-black"
+                                            >
+                                                Apply
+                                            </button>
+                                        )}
+                                    </div>
+                                    {appliedCoupon && (
+                                        <p className="text-xs text-green-600 mt-1 font-bold">
+                                            Coupon CN10 applied! 10% off.
+                                        </p>
+                                    )}
+                                </div>
+                            </div>
+
+                            <div className="mt-6 pt-4 border-t border-dashed border-gray-300 space-y-2">
+                                <div className="flex justify-between text-sm text-gray-600">
+                                    <span>Subtotal</span>
                                     <span>₹{total}</span>
                                 </div>
-                                <p className="text-xs text-brand-red text-right mt-1 italic">
-                                    Delivery charges applicable.
-                                </p>
+                                {discountAmount > 0 && (
+                                    <div className="flex justify-between text-sm text-green-600 font-bold">
+                                        <span>Discount (10%)</span>
+                                        <span>-₹{discountAmount}</span>
+                                    </div>
+                                )}
+                                <div className="flex justify-between text-sm text-gray-600">
+                                    <span>Delivery Charges</span>
+                                    <span>₹{deliveryCharge}</span>
+                                </div>
+                                <div className="flex justify-between items-center text-xl font-bold text-brand-dark pt-2 border-t border-gray-200">
+                                    <span>Total Amount</span>
+                                    <span>₹{finalTotal}</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="p-4 bg-gray-50 rounded-b-2xl">
+                        <div className="p-4 bg-gray-50 rounded-b-2xl shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
                             <a
                                 href={generateWhatsAppLink()}
                                 target="_blank"

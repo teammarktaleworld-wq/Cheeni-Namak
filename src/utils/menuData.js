@@ -1,3 +1,28 @@
+import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
+import rajmaImg from '../assets/dishes/rajma.png';
+import dalTadkaImg from '../assets/dishes/dal_tadka.png';
+import butterChickenImg from '../assets/dishes/butter_chicken.png';
+import choleImg from '../assets/dishes/chole.png';
+import kadhiPakodaImg from '../assets/dishes/kadhi_pakoda.png';
+import paneerBhurjiImg from '../assets/dishes/paneer_bhurji.png';
+import chickenCurryImg from '../assets/dishes/chicken_curry.png';
+import handiChickenImg from '../assets/dishes/handi_chicken.png';
+import eggCurryImg from '../assets/dishes/egg_curry.png';
+import eggBhurjiImg from '../assets/dishes/egg_bhurji.png';
+import handiMuttonImg from '../assets/dishes/handi_mutton.png';
+import vegManchowImg from '../assets/dishes/veg_manchow.png';
+import chickenManchowImg from '../assets/dishes/chicken_manchow.png';
+import boondiRaitaImg from '../assets/dishes/boondi_raita.png';
+import vegChowmeinImg from '../assets/dishes/veg_chowmein.png';
+import vegMacaroniImg from '../assets/dishes/veg_macaroni.png';
+import plainRiceImg from '../assets/dishes/plain_rice.png';
+import jeeraRiceImg from '../assets/dishes/jeera_rice.png';
+import tawaRotiImg from '../assets/dishes/tawa_roti.png';
+import plainParathaImg from '../assets/dishes/plain_paratha.png';
+import puriImg from '../assets/dishes/puri.jpg';
+import pyazParathaImg from '../assets/dishes/pyaz_paratha.jpg';
+import alooPyazParathaImg from '../assets/dishes/aloo_pyaz_paratha.jpg';
+
 export const CATEGORIES = [
     "Main Course (Veg)",
     "Main Course (Non-Veg)",
@@ -12,67 +37,91 @@ export const MENU_ITEMS = [
         id: 'kadai-paneer',
         name: 'Kadai Paneer',
         category: 'Main Course (Veg)',
+        description: 'Cottage cheese cooked in a spicy tomato-based gravy with bell peppers.',
+        image: kadaiPaneerImg,
         variants: [
             { name: 'Half', price: 90 },
             { name: 'Full', price: 160 }
         ],
         isVeg: true,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.8,
+        reviewCount: 18
     },
     {
         id: 'rajma',
         name: 'Rajma',
         category: 'Main Course (Veg)',
+        description: 'Classic North Indian kidney beans curry, best enjoyed with rice.',
+        image: rajmaImg,
         variants: [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
         isVeg: true,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.5,
+        reviewCount: 12
     },
     {
         id: 'dal-tadka',
         name: 'Dal Tadka (Toor Dal)',
         category: 'Main Course (Veg)',
+        description: 'Yellow lentils tempered with ghee, cumin, garlic, and red chilies.',
+        image: dalTadkaImg,
         variants: [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
         isVeg: true,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.2,
+        reviewCount: 8
     },
     {
         id: 'chole',
         name: 'Chole',
         category: 'Main Course (Veg)',
+        description: 'Spicy chickpeas cooked in a flavorful masala gravy.',
+        image: choleImg,
         variants: [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
         isVeg: true,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.6,
+        reviewCount: 15
     },
     {
         id: 'kadhi-pakoda',
         name: 'Kadhi Pakoda',
         category: 'Main Course (Veg)',
+        description: 'Yogurt-based curry with fried gram flour dumplings.',
+        image: kadhiPakodaImg,
         variants: [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
         isVeg: true,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.0,
+        reviewCount: 6
     },
     {
         id: 'paneer-bhurji',
         name: 'Paneer Bhurji',
         category: 'Main Course (Veg)',
+        description: 'Scrambled cottage cheese tossed with onions, tomatoes, and spices.',
+        image: paneerBhurjiImg,
         variants: [
             { name: 'Half', price: 100 },
             { name: 'Full', price: 180 }
         ],
         isVeg: true,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.7,
+        reviewCount: 14
     },
 
     // Main Course (Non-Veg)
@@ -80,71 +129,95 @@ export const MENU_ITEMS = [
         id: 'chicken-curry',
         name: 'Chicken Curry',
         category: 'Main Course (Non-Veg)',
+        description: 'Traditional home-style chicken curry cooked with aromatic spices.',
+        image: chickenCurryImg,
         variants: [
             { name: '2 pcs', price: 90 },
             { name: '4 pcs', price: 160 },
             { name: '8 pcs', price: 300 }
         ],
         isVeg: false,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.9,
+        reviewCount: 19
     },
     {
         id: 'butter-chicken',
         name: 'Butter Chicken',
         category: 'Main Course (Non-Veg)',
+        description: 'Tender chicken cooked in a rich, creamy tomato and butter gravy.',
+        image: butterChickenImg,
         variants: [
             { name: '2 pcs', price: 100 },
             { name: '4 pcs', price: 180 },
             { name: '8 pcs', price: 330 }
         ],
         isVeg: false,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 5.0,
+        reviewCount: 20
     },
     {
         id: 'handi-chicken',
         name: 'Handi Chicken',
         category: 'Main Course (Non-Veg)',
+        description: 'Slow-cooked chicken in a traditional earthen pot with rich flavors.',
+        image: handiChickenImg,
         variants: [
             { name: '3 pcs', price: 150 },
             { name: '6 pcs', price: 270 },
             { name: '9 pcs', price: 510 }
         ],
         isVeg: false,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.8,
+        reviewCount: 16
     },
     {
         id: 'egg-curry',
         name: 'Egg Curry',
         category: 'Main Course (Non-Veg)',
+        description: 'Boiled eggs simmered in a spicy onion-tomato gravy.',
+        image: eggCurryImg,
         variants: [
             { name: '2 Eggs', price: 60 },
             { name: '4 Eggs', price: 110 }
         ],
         isVeg: false,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.3,
+        reviewCount: 9
     },
     {
         id: 'egg-bhurji',
         name: 'Egg Bhurji',
         category: 'Main Course (Non-Veg)',
+        description: 'Scrambled eggs spiced with onions, chilies, and coriander.',
+        image: eggBhurjiImg,
         variants: [
             { name: 'Half', price: 70 },
             { name: 'Full', price: 120 }
         ],
         isVeg: false,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.4,
+        reviewCount: 7
     },
     {
         id: 'handi-mutton',
         name: 'Handi Mutton',
         category: 'Main Course (Non-Veg)',
+        description: 'Exquisite mutton slow-cooked in a handi with secret spices.',
+        image: handiMuttonImg,
         variants: [
             { name: '3 pcs', price: 350 },
             { name: '6 pcs', price: 650 },
             { name: '9 pcs', price: 1050 }
         ],
         isVeg: false,
-        hasSpicyOption: true
+        hasSpicyOption: true,
+        rating: 4.9,
+        reviewCount: 11
     },
 
     // Soups & Sides
@@ -152,22 +225,34 @@ export const MENU_ITEMS = [
         id: 'veg-manchow',
         name: 'Veg Manchow Soup',
         category: 'Soups & Sides',
+        description: 'Spicy and tangy soup with crunchy fried noodles.',
+        image: vegManchowImg,
         price: 70,
-        isVeg: true
+        isVeg: true,
+        rating: 4.1,
+        reviewCount: 5
     },
     {
         id: 'chicken-manchow',
         name: 'Chicken Manchow Soup',
         category: 'Soups & Sides',
+        description: 'Hot and spicy chicken soup topped with crispy noodles.',
+        image: chickenManchowImg,
         price: 110,
-        isVeg: false
+        isVeg: false,
+        rating: 4.3,
+        reviewCount: 8
     },
     {
         id: 'boondi-raita',
         name: 'Boondi Raita',
         category: 'Soups & Sides',
+        description: 'Refreshing yogurt mixed with crispy boondi and mild spices.',
+        image: boondiRaitaImg,
         price: 50,
-        isVeg: true
+        isVeg: true,
+        rating: 4.0,
+        reviewCount: 4
     },
 
     // Rice & Noodles
@@ -175,41 +260,57 @@ export const MENU_ITEMS = [
         id: 'veg-chowmein',
         name: 'Veg Chowmein',
         category: 'Rice & Noodles',
+        description: 'Stir-fried noodles with crunchy vegetables and soy sauce.',
+        image: vegChowmeinImg,
         variants: [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
-        isVeg: true
+        isVeg: true,
+        rating: 4.4,
+        reviewCount: 13
     },
     {
         id: 'veg-macaroni',
         name: 'Veg Macaroni',
         category: 'Rice & Noodles',
+        description: 'Indian-style macaroni pasta cooked with veggies and spices.',
+        image: vegMacaroniImg,
         variants: [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
-        isVeg: true
+        isVeg: true,
+        rating: 3.9,
+        reviewCount: 6
     },
     {
         id: 'plain-rice',
         name: 'Plain Rice',
         category: 'Rice & Noodles',
+        description: 'Steamed basmati rice, fluffy and perfect for curries.',
+        image: plainRiceImg,
         variants: [
             { name: 'Half', price: 60 },
             { name: 'Full', price: 110 }
         ],
-        isVeg: true
+        isVeg: true,
+        rating: 4.0,
+        reviewCount: 3
     },
     {
         id: 'jeera-rice',
         name: 'Jeera Rice',
         category: 'Rice & Noodles',
+        description: 'Basmati rice tempered with cumin seeds and ghee.',
+        image: jeeraRiceImg,
         variants: [
             { name: 'Half', price: 70 },
             { name: 'Full', price: 120 }
         ],
-        isVeg: true
+        isVeg: true,
+        rating: 4.2,
+        reviewCount: 5
     },
 
     // Breads
@@ -217,51 +318,71 @@ export const MENU_ITEMS = [
         id: 'tawa-roti',
         name: 'Tawa Roti',
         category: 'Breads',
+        description: 'Soft whole wheat flatbread cooked on a griddle.',
+        image: tawaRotiImg,
         variants: [
             { name: 'Plain', price: 8 },
             { name: 'Butter', price: 12 },
             { name: 'Ghee', price: 12 }
         ],
-        isVeg: true
+        isVeg: true,
+        rating: 4.5,
+        reviewCount: 18
     },
     {
         id: 'plain-paratha',
         name: 'Plain Paratha',
         category: 'Breads',
+        description: 'Layered whole wheat flatbread, shallow fried.',
+        image: plainParathaImg,
         variants: [
             { name: 'Plain', price: 15 },
             { name: 'Butter', price: 19 },
             { name: 'Ghee', price: 19 }
         ],
-        isVeg: true
+        isVeg: true,
+        rating: 4.3,
+        reviewCount: 9
     },
     {
         id: 'pyaz-paratha',
         name: 'Pyaz Paratha',
         category: 'Breads',
+        description: 'Paratha stuffed with spiced chopped onions.',
+        image: pyazParathaImg,
         variants: [
             { name: 'Plain', price: 30 },
             { name: 'Butter', price: 34 },
             { name: 'Ghee', price: 34 }
         ],
-        isVeg: true
+        isVeg: true,
+        rating: 4.7,
+        reviewCount: 12
     },
     {
-        id: 'aloo-pyaz-paratha',
+        id: 'loo-pyaz-paratha',
         name: 'Aloo Pyaz Paratha',
         category: 'Breads',
+        description: 'Paratha stuffed with a mix of spiced potatoes and onions.',
+        image: alooPyazParathaImg,
         variants: [
             { name: 'Plain', price: 35 },
             { name: 'Butter', price: 39 },
             { name: 'Ghee', price: 39 }
         ],
-        isVeg: true
+        isVeg: true,
+        rating: 4.8,
+        reviewCount: 14
     },
     {
         id: 'puri',
         name: 'Puri (6 pcs)',
         category: 'Breads',
+        description: 'Deep-fried fluffy whole wheat bread.',
+        image: puriImg,
         price: 40,
-        isVeg: true
+        isVeg: true,
+        rating: 4.6,
+        reviewCount: 10
     }
 ];
