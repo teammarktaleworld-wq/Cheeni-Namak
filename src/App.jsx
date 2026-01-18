@@ -4,6 +4,8 @@ import MenuItem from './components/MenuItem';
 import HeroBanner from './components/HeroBanner';
 import Cart from './components/Cart';
 import ReviewCarousel from './components/ReviewCarousel';
+import DietaryToggle from './components/DietaryToggle';
+import FeaturesSection from './components/FeaturesSection';
 import { MENU_ITEMS, CATEGORIES } from './utils/menuData';
 
 // Decoration Images
@@ -15,6 +17,8 @@ const App = () => {
   const [cart, setCart] = useState({});
   const [isCartOpen, setIsCartOpen] = useState(false);
 
+
+  const [dietaryFilter, setDietaryFilter] = useState('all');
 
   const addToCart = (product) => {
     setCart((prevCart) => {
@@ -58,9 +62,19 @@ const App = () => {
   const total = Object.values(cart).reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const cartItemCount = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
 
+  // Filter Menu Items based on selection
+  const filteredItems = MENU_ITEMS.filter(item => {
+    if (dietaryFilter === 'veg') return item.isVeg === true;
+    if (dietaryFilter === 'non-veg') return item.isVeg === false;
+    return true;
+  });
+
   // Group items by category
   const menuByCategory = CATEGORIES.reduce((acc, category) => {
-    acc[category] = MENU_ITEMS.filter(item => item.category === category);
+    const items = filteredItems.filter(item => item.category === category);
+    if (items.length > 0) {
+      acc[category] = items;
+    }
     return acc;
   }, {});
 
@@ -74,49 +88,51 @@ const App = () => {
         {/* Sales-Oriented Hero Banner (Food Slides) */}
         <HeroBanner />
 
-        {/* Digital Menu Card - Fully Visible */}
-        <section className="mb-20 max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-black text-gray-900 mb-2">Our Menu Card</h2>
-          <p className="text-gray-500 mb-8">Authentic prices and portions</p>
-
-          <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white inline-block w-full">
-            <img
-              src="/menu.jpg"
-              alt="Cheeni Namak Full Menu"
-              className="w-full h-auto block"
-            />
-          </div>
-        </section>
+        {/* Why Choose Us Features */}
+        <FeaturesSection />
 
         {/* Categories & Menu */}
         <div id="menu-section" className="pt-10">
-          {CATEGORIES.map((category) => {
-            const items = menuByCategory[category];
-            if (!items || items.length === 0) return null;
 
-            return (
-              <section key={category} className="mb-20">
-                <div className="text-center mb-10">
-                  <h2 className="text-3xl md:text-4xl font-serif font-black text-gray-900 relative inline-block">
-                    {category}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-brand-red rounded-full"></div>
-                  </h2>
-                </div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Explore Our Menu</h2>
+            <p className="text-gray-500 mb-8">Select your preference below</p>
+            <DietaryToggle currentFilter={dietaryFilter} onFilterChange={setDietaryFilter} />
+          </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {items.map((item) => (
-                    <MenuItem
-                      key={item.id}
-                      item={item}
-                      cart={cart}
-                      addToCart={addToCart}
-                      removeFromCart={removeFromCart}
-                    />
-                  ))}
-                </div>
-              </section>
-            );
-          })}
+          {Object.keys(menuByCategory).length === 0 ? (
+            <div className="text-center py-20">
+              <p className="text-xl text-gray-500">No items found for this selection.</p>
+            </div>
+          ) : (
+            CATEGORIES.map((category) => {
+              const items = menuByCategory[category];
+              if (!items) return null;
+
+              return (
+                <section key={category} className="mb-20">
+                  <div className="text-center mb-10">
+                    <h2 className="text-3xl md:text-4xl font-serif font-black text-gray-900 relative inline-block">
+                      {category}
+                      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-brand-red rounded-full"></div>
+                    </h2>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {items.map((item) => (
+                      <MenuItem
+                        key={item.id}
+                        item={item}
+                        cart={cart}
+                        addToCart={addToCart}
+                        removeFromCart={removeFromCart}
+                      />
+                    ))}
+                  </div>
+                </section>
+              );
+            })
+          )}
         </div>
 
         {/* Customer Reviews */}

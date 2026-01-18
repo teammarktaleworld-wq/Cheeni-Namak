@@ -132,9 +132,9 @@ export const MENU_ITEMS = [
         description: 'Traditional home-style chicken curry cooked with aromatic spices.',
         image: chickenCurryImg,
         variants: [
-            { name: '2 pcs', price: 90 },
-            { name: '4 pcs', price: 160 },
-            { name: '8 pcs', price: 300 }
+            { name: 'Qtr (3 pcs)', price: 240 },
+            { name: 'Half (6 pcs)', price: 460 },
+            { name: 'Full (9 pcs)', price: 680 }
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -148,9 +148,9 @@ export const MENU_ITEMS = [
         description: 'Tender chicken cooked in a rich, creamy tomato and butter gravy.',
         image: butterChickenImg,
         variants: [
-            { name: '2 pcs', price: 100 },
-            { name: '4 pcs', price: 180 },
-            { name: '8 pcs', price: 330 }
+            { name: 'Qtr (3 pcs)', price: 240 },
+            { name: 'Half (6 pcs)', price: 460 },
+            { name: 'Full (9 pcs)', price: 680 }
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -164,9 +164,9 @@ export const MENU_ITEMS = [
         description: 'Slow-cooked chicken in a traditional earthen pot with rich flavors.',
         image: handiChickenImg,
         variants: [
-            { name: '3 pcs', price: 150 },
-            { name: '6 pcs', price: 270 },
-            { name: '9 pcs', price: 510 }
+            { name: 'Qtr (3 pcs)', price: 240 },
+            { name: 'Half (6 pcs)', price: 460 },
+            { name: 'Full (9 pcs)', price: 680 }
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -210,9 +210,9 @@ export const MENU_ITEMS = [
         description: 'Exquisite mutton slow-cooked in a handi with secret spices.',
         image: handiMuttonImg,
         variants: [
-            { name: '3 pcs', price: 350 },
-            { name: '6 pcs', price: 650 },
-            { name: '9 pcs', price: 1050 }
+            { name: 'Qtr (3 pcs)', price: 350 },
+            { name: 'Half (6 pcs)', price: 680 },
+            { name: 'Full (9 pcs)', price: 1010 }
         ],
         isVeg: false,
         hasSpicyOption: true,
