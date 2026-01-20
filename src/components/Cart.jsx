@@ -67,8 +67,15 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
         const dist = parseFloat(distance);
         if (isNaN(dist)) return 0;
         if (dist > MAX_DELIVERY_RADIUS) return 0; // Should be handled by error state, but safe guard
-        if (dist <= 5) return 0;
-        return Math.ceil((dist - 5) * 10);
+
+        // Free delivery under 5km ONLY if total order value >= 300
+        if (total >= 300) {
+            if (dist <= 5) return 0;
+            return Math.ceil((dist - 5) * 10);
+        } else {
+            // For orders < 300, charge for full distance
+            return Math.ceil(dist * 10);
+        }
     })();
 
     const discountAmount = appliedCoupon === 'CN10' ? Math.round(total * 0.1) : 0;
@@ -214,7 +221,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
                                         <p className="text-xs text-red-500 mt-1">{locationError}</p>
                                     ) : (
                                         <p className="text-[10px] text-gray-500 mt-1">
-                                            Free under 5km. ₹10/km for extra distance.
+                                            Free under 5km for orders &gt; ₹300. Otherwise ₹10/km.
                                         </p>
                                     )}
                                 </div>
