@@ -82,7 +82,7 @@ const HeroBanner = () => {
                             Order Now
                         </button>
                         <a
-                            href="https://wa.me/919667334797"
+                            href="https://wa.me/919217713285"
                             target="_blank"
                             rel="noreferrer"
                             className="bg-white text-gray-800 border border-gray-200 px-8 py-3.5 rounded-full font-bold text-lg shadow-sm hover:border-brand-red hover:text-brand-red transition-all"

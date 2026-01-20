@@ -84,7 +84,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
     };
 
     const generateWhatsAppLink = () => {
-        const phoneNumber = "919667334797";
+        const phoneNumber = "919217713285";
         let message = "Namaste Cheeni Namak! I would like to place an order:\n\n";
 
         Object.values(cartItems).forEach(item => {
