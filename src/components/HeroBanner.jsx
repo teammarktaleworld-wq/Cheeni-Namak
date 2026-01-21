@@ -9,7 +9,7 @@ const SLIDES = [
     {
         id: 1,
         title: "Authentic Home Flavors",
-        subtitle: "Seedha Ghar Se",
+        subtitle: "by Kaarthika",
         description: "Experience the warmth of home-cooked meals delivered to your doorstep.",
         image: butterChickenImg,
         bgColor: "bg-[#FFF0E5]", // Soft Orange/Peach

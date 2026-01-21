@@ -88,7 +88,7 @@ export const MENU_ITEMS = [
         description: 'Spicy chickpeas cooked in a flavorful masala gravy.',
         image: choleImg,
         variants: [
-            { name: 'Half', price: 60 },
+            { name: 'Half', price: 70 },
             { name: 'Full', price: 110 }
         ],
         isVeg: true,

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { calculateDeliveryCharge } from '../utils/deliveryUtils';
 
-const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
+const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, removeFromCart }) => {
     const [couponCode, setCouponCode] = useState('');
     const [appliedCoupon, setAppliedCoupon] = useState(null);
     const [distance, setDistance] = useState('');
@@ -63,20 +64,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
         );
     };
 
-    const deliveryCharge = (() => {
-        const dist = parseFloat(distance);
-        if (isNaN(dist)) return 0;
-        if (dist > MAX_DELIVERY_RADIUS) return 0; // Should be handled by error state, but safe guard
-
-        // Free delivery under 5km ONLY if total order value >= 300
-        if (total >= 300) {
-            if (dist <= 5) return 0;
-            return Math.ceil((dist - 5) * 10);
-        } else {
-            // For orders < 300, charge for full distance
-            return Math.ceil(dist * 10);
-        }
-    })();
+    const deliveryCharge = calculateDeliveryCharge(distance, total);
 
     const discountAmount = appliedCoupon === 'CN10' ? Math.round(total * 0.1) : 0;
     const finalTotal = total - discountAmount + deliveryCharge;
@@ -164,7 +152,22 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
                                         </div>
                                         {item.variant && <p className="text-xs text-gray-500 ml-5">{item.variant}</p>}
                                         {item.spicyLevel && <p className="text-xs text-orange-600 ml-5">Spicy: {item.spicyLevel}</p>}
-                                        <p className="text-sm text-gray-600 ml-5">₹{item.price} x {item.quantity}</p>
+                                        {/* Quantity Controls */}
+                                        <div className="flex items-center gap-3 ml-5 mt-2">
+                                            <button
+                                                onClick={() => removeFromCart(item.id)}
+                                                className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-brand-dark transition-colors"
+                                            >
+                                                -
+                                            </button>
+                                            <span className="font-bold text-brand-dark w-4 text-center">{item.quantity}</span>
+                                            <button
+                                                onClick={() => addToCart(item)}
+                                                className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-brand-dark transition-colors"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
                                     </div>
                                     <div className="flex items-center gap-4">
                                         <div className="font-bold text-brand-dark">
@@ -221,7 +224,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem }) => {
                                         <p className="text-xs text-red-500 mt-1">{locationError}</p>
                                     ) : (
                                         <p className="text-[10px] text-gray-500 mt-1">
-                                            Free under 5km for orders &gt; ₹300. Otherwise ₹10/km.
+                                            Free &lt; 5km for orders &gt; ₹300. Small orders charge ₹40. Extra &gt; 5km.
                                         </p>
                                     )}
                                 </div>

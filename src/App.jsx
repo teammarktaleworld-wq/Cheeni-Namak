@@ -223,6 +223,8 @@ const App = () => {
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(!isCartOpen)}
         removeItem={removeItemFully}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
       />
 
       {/* WhatsApp Chat Mascot/FAB */}
