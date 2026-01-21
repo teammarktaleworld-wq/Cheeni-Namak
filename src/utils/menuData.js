@@ -2,7 +2,7 @@ import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
 import rajmaImg from '../assets/dishes/rajma.png';
 import dalTadkaImg from '../assets/dishes/dal_tadka.png';
 import butterChickenImg from '../assets/dishes/butter_chicken.png';
-import choleImg from '../assets/dishes/chole.jpg';
+import choleImg from '../assets/dishes/chole_v2.jpg';
 import kadhiPakodaImg from '../assets/dishes/kadhi_pakoda.png';
 import paneerBhurjiImg from '../assets/dishes/paneer_bhurji.png';
 import chickenCurryImg from '../assets/dishes/chicken_curry.png';
