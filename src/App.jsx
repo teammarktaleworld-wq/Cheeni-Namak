@@ -150,7 +150,7 @@ const App = () => {
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-8 h-8 bg-brand-red rounded-lg flex items-center justify-center text-white font-serif font-bold text-xl">C</div>
-                <h3 className="font-serif text-2xl font-bold text-gray-900">Cheeni <span style={{ fontFamily: '"Berkshire Swash", cursive', fontSize: '1.2em' }}>N</span>amak</h3>
+                <h3 className="font-serif text-2xl font-bold text-gray-900">Cheeni <span style={{ fontFamily: '"Lobster Two", cursive', fontSize: '1.2em' }}>N</span>amak</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
                 Authentic homemade food delivered straight to your doorstep. Experience the taste of pure love and tradition.
