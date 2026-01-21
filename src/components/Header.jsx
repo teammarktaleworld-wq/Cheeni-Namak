@@ -12,7 +12,7 @@ const Header = ({ cartCount, onCartClick }) => {
                     </div>
                     <div className="flex flex-col">
                         <div className="flex items-baseline gap-2">
-                            <h1 className="text-2xl md:text-3xl font-serif text-[#5D4037] font-black tracking-tight leading-none">
+                            <h1 className="text-2xl md:text-3xl font-serif text-brand-red font-black tracking-tight leading-none">
                                 Cheeni <span style={{ fontFamily: '"Lobster Two", cursive', fontSize: '1.2em' }}>N</span>amak
                             </h1>
                         </div>
