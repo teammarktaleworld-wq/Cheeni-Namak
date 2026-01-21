@@ -17,7 +17,7 @@ const Header = ({ cartCount, onCartClick }) => {
                             </h1>
                         </div>
                         <p className="text-sm font-medium text-[#8D6E63] italic mb-1">
-                            Seedha ghar se
+                            by Kaarthika
                         </p>
 
                         {/* Badges - Desktop */}

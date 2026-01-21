@@ -189,9 +189,16 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
                             <div className="mt-6 space-y-4">
                                 {/* Delivery Section */}
                                 <div className="bg-gray-50 p-3 rounded-lg">
-                                    <label className="block text-sm font-bold text-brand-dark mb-1">
-                                        Delivery Distance (km)
-                                    </label>
+                                    <div className="flex justify-between items-center mb-1">
+                                        <label className="block text-sm font-bold text-brand-dark">
+                                            Delivery Distance (km)
+                                        </label>
+                                        {!distance && !locationError && (
+                                            <span className="text-[10px] font-bold text-white bg-brand-red px-2 py-0.5 rounded-full animate-bounce shadow-md">
+                                                👈 Click Locate to proceed
+                                            </span>
+                                        )}
+                                    </div>
                                     <div className="flex gap-2">
                                         <input
                                             type="number"
@@ -205,7 +212,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
                                         <button
                                             onClick={handleLocateMe}
                                             disabled={isLocating}
-                                            className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-bold hover:bg-blue-700 disabled:bg-blue-300 flex items-center gap-1"
+                                            className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-bold hover:bg-blue-700 disabled:bg-blue-300 flex items-center gap-1 relative overflow-hidden"
                                         >
                                             {isLocating ? (
                                                 <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -223,8 +230,19 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
                                     {locationError ? (
                                         <p className="text-xs text-red-500 mt-1">{locationError}</p>
                                     ) : (
-                                        <p className="text-[10px] text-gray-500 mt-1">
-                                            Free &lt; 5km for orders &gt; ₹300. Small orders charge ₹40. Extra &gt; 5km.
+                                        <p className={`text-xs mt-2 font-medium ${total < 300 && distance <= 5 ? 'text-brand-red animate-pulse' : 'text-green-600'}`}>
+                                            {(() => {
+                                                if (!distance) return "Please locate address to calculate delivery charge.";
+                                                const dist = parseFloat(distance);
+                                                if (dist > 5) return "Standard delivery rates apply for > 5km.";
+
+                                                if (total < 300) {
+                                                    const needed = 300 - total;
+                                                    return `Add items worth ₹${needed} more for FREE Delivery! 🚀`;
+                                                } else {
+                                                    return "YAY! Free Delivery Unlocked! 🎉";
+                                                }
+                                            })()}
                                         </p>
                                     )}
                                 </div>
