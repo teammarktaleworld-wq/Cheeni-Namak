@@ -66,12 +66,18 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
 
     const deliveryCharge = calculateDeliveryCharge(distance, total);
 
-    const discountAmount = appliedCoupon === 'CN10' ? Math.round(total * 0.1) : 0;
+    let discountRate = 0;
+    if (appliedCoupon === 'CN10') discountRate = 0.1;
+    else if (appliedCoupon === 'CN15') discountRate = 0.15;
+    else if (appliedCoupon === 'CN20') discountRate = 0.2;
+
+    const discountAmount = Math.round(total * discountRate);
     const finalTotal = total - discountAmount + deliveryCharge;
 
     const handleApplyCoupon = () => {
-        if (couponCode.toUpperCase() === 'CN10') {
-            setAppliedCoupon('CN10');
+        const code = couponCode.toUpperCase();
+        if (['CN10', 'CN15', 'CN20'].includes(code)) {
+            setAppliedCoupon(code);
         } else {
             alert('Invalid Coupon Code');
             setAppliedCoupon(null);
@@ -90,7 +96,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
 
         message += `\n*Subtotal: ₹${total}*`;
         if (discountAmount > 0) {
-            message += `\n*Discount (CN10): -₹${discountAmount}*`;
+            message += `\n*Discount (${appliedCoupon}): -₹${discountAmount}*`;
         }
         message += `\n*Delivery Charge (${distance || 0} km): ₹${deliveryCharge}*`;
         message += `\n*Total Amount: ₹${finalTotal}*`;
@@ -270,7 +276,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
                                     </div>
                                     {appliedCoupon && (
                                         <p className="text-xs text-green-600 mt-1 font-bold">
-                                            Coupon CN10 applied! 10% off.
+                                            Coupon {appliedCoupon} applied! {Math.round(discountRate * 100)}% off.
                                         </p>
                                     )}
                                 </div>
@@ -283,7 +289,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
                                 </div>
                                 {discountAmount > 0 && (
                                     <div className="flex justify-between text-sm text-green-600 font-bold">
-                                        <span>Discount (10%)</span>
+                                        <span>Discount ({Math.round(discountRate * 100)}%)</span>
                                         <span>-₹{discountAmount}</span>
                                     </div>
                                 )}
