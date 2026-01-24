@@ -188,6 +188,22 @@ export const MENU_ITEMS = [
         reviewCount: 16
     },
     {
+        id: 'kadhai-chicken',
+        name: 'Kadhai Chicken',
+        category: 'Main Course (Non-Veg)',
+        description: 'Flavorful chicken cooked in a wok with fresh ground spices and bell peppers.',
+        image: handiChickenImg,
+        variants: [
+            { name: 'Qtr (3 pcs)', price: 230 },
+            { name: 'Half (6 pcs)', price: 400 },
+            { name: 'Full (9 pcs)', price: 560 }
+        ],
+        isVeg: false,
+        hasSpicyOption: true,
+        rating: 4.7,
+        reviewCount: 8
+    },
+    {
         id: 'egg-curry',
         name: 'Egg Curry',
         category: 'Main Course (Non-Veg)',
