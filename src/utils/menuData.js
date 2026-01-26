@@ -53,7 +53,8 @@ import tawaRotiGheeImg from '../assets/dishes/tawa_roti_ghee.png';
 export const CATEGORIES = [
     "Main Course (Veg)",
     "Main Course (Non-Veg)",
-    "Momos",
+    "Steamed Momos",
+    "Fried Momos",
     "Rice & Noodles",
     "Breads",
     "Soups & Sides"
@@ -275,33 +276,92 @@ export const MENU_ITEMS = [
     },
 
     // Momos
+    // Steamed Momos
+    {
+        id: 'chicken-steamed-momos',
+        name: 'Chicken Steamed Momos',
+        category: 'Steamed Momos',
+        description: 'Juicy steamed momos filled with minced chicken and mild spices.',
+        image: chickenSteamedMomosImg,
+        variants: [
+            { name: 'Half (5 pcs)', price: 70 },
+            { name: 'Full (10 pcs)', price: 130 }
+        ],
+        isVeg: false,
+        rating: 4.8,
+        reviewCount: 22
+    },
+    {
+        id: 'paneer-steamed-momos',
+        name: 'Paneer Steamed Momos',
+        category: 'Steamed Momos',
+        description: 'Soft steamed momos filled with fresh paneer and herbs.',
+        image: paneerSteamedMomosImg,
+        variants: [
+            { name: 'Half (5 pcs)', price: 70 },
+            { name: 'Full (10 pcs)', price: 130 }
+        ],
+        isVeg: true,
+        rating: 4.7,
+        reviewCount: 18
+    },
     {
         id: 'veg-steamed-momos',
         name: 'Veg Steamed Momos',
-        category: 'Momos',
-        description: 'Steamed momos filled with fresh mixed vegetables.',
+        category: 'Steamed Momos',
+        description: 'Delicate steamed momos packed with mixed vegetables.',
         image: mixedVegSteamedMomosImg,
         variants: [
-            { name: 'Half (5 Pcs)', price: 70 },
-            { name: 'Full (10 Pcs)', price: 130 }
+            { name: 'Half (5 pcs)', price: 50 },
+            { name: 'Full (10 pcs)', price: 100 }
         ],
         isVeg: true,
-        rating: 4.5,
-        reviewCount: 15
+        rating: 4.6,
+        reviewCount: 25
+    },
+
+    // Fried Momos
+    {
+        id: 'chicken-fried-momos',
+        name: 'Chicken Fried Momos',
+        category: 'Fried Momos',
+        description: 'Crispy fried chicken momos, golden and delicious.',
+        image: chickenFriedMomosImg,
+        variants: [
+            { name: 'Half (5 pcs)', price: 85 },
+            { name: 'Full (10 pcs)', price: 145 }
+        ],
+        isVeg: false,
+        rating: 4.8,
+        reviewCount: 20
+    },
+    {
+        id: 'paneer-fried-momos',
+        name: 'Paneer Fried Momos',
+        category: 'Fried Momos',
+        description: 'Crunchy fried momos with a soft paneer filling.',
+        image: paneerCrunchyMomosImg,
+        variants: [
+            { name: 'Half (5 pcs)', price: 85 },
+            { name: 'Full (10 pcs)', price: 145 }
+        ],
+        isVeg: true,
+        rating: 4.7,
+        reviewCount: 16
     },
     {
         id: 'veg-fried-momos',
         name: 'Veg Fried Momos',
-        category: 'Momos',
-        description: 'Crispy fried momos with vegetable filling.',
+        category: 'Fried Momos',
+        description: 'Crispy fried vegetable momos served with spicy chutney.',
         image: vegCrunchyMomosImg,
         variants: [
-            { name: 'Half (5 Pcs)', price: 90 },
-            { name: 'Full (10 Pcs)', price: 150 }
+            { name: 'Half (5 pcs)', price: 65 },
+            { name: 'Full (10 pcs)', price: 115 }
         ],
         isVeg: true,
         rating: 4.6,
-        reviewCount: 18
+        reviewCount: 22
     },
 
     // Soups & Sides
