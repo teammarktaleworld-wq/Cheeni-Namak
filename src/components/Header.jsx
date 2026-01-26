@@ -8,7 +8,7 @@ const Header = ({ cartCount, onCartClick }) => {
                 {/* Logo & Brand */}
                 <div className="flex items-center gap-4">
                     <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden shadow-sm hover:scale-105 transition-transform">
-                        <img src="/logo.jpg" alt="Cheeni Namak Logo" className="w-full h-full object-cover" />
+                        <img src="/logo_v2.png" alt="Cheeni Namak Logo" className="w-full h-full object-cover" />
                     </div>
                     <div className="flex flex-col">
                         <div className="flex items-baseline gap-2">

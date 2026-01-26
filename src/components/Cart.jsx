@@ -305,6 +305,14 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
                         </div>
 
                         <div className="p-4 bg-gray-50 rounded-b-2xl shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+                            <div className="bg-orange-50 border border-orange-100 rounded-lg p-3 mb-3 flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-orange-500 shrink-0 mt-0.5">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                                <p className="text-xs text-orange-800 font-medium leading-relaxed">
+                                    Orders will be dispatched within 45 minutes as we prepare food fresh after confirmation.
+                                </p>
+                            </div>
                             <a
                                 href={!locationError && distance ? generateWhatsAppLink() : undefined}
                                 target={!locationError && distance ? "_blank" : undefined}
