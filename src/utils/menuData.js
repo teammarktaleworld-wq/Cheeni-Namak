@@ -221,6 +221,38 @@ export const MENU_ITEMS = [
         rating: 5.0,
         reviewCount: 20
     },
+    {
+        id: 'egg-curry',
+        name: 'Egg Curry',
+        category: 'Main Course (Non-Veg)',
+        description: 'Boiled eggs simmered in a spicy onion-tomato gravy.',
+        image: eggCurryImg,
+        variants: [
+            { name: '2 Eggs', price: 70 },
+            { name: '4 Eggs', price: 130 }
+        ],
+        isVeg: false,
+        hasSpicyOption: true,
+        rating: 4.3,
+        reviewCount: 9
+    },
+    {
+        id: 'egg-bhurji',
+        name: 'Egg Bhurji',
+        category: 'Main Course (Non-Veg)',
+        description: 'Scrambled eggs spiced with onions, chilies, and coriander.',
+        image: eggBhurjiImg,
+        variants: [
+            { name: 'Quarter (250 ml)', price: 80 },
+            { name: 'Half (500 ml)', price: 150 },
+            { name: 'Full (750 ml)', price: 220 },
+            { name: '1 Litre', price: 290 }
+        ],
+        isVeg: false,
+        hasSpicyOption: true,
+        rating: 4.4,
+        reviewCount: 7
+    },
 
 
     {
