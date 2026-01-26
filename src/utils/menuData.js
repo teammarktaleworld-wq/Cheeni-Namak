@@ -48,6 +48,7 @@ import alooPyazParathaImg from '../assets/dishes/aloo_pyaz_paratha.jpg';
 import cholePuriImg from '../assets/dishes/chole_puri.jpg';
 import vegFriedRiceImg from '../assets/dishes/veg_fried_rice.jpg';
 import eggFriedRiceImg from '../assets/dishes/egg_fried_rice.jpg';
+import tawaRotiGheeImg from '../assets/dishes/tawa_roti_ghee.png';
 
 export const CATEGORIES = [
     "Main Course (Veg)",
@@ -84,8 +85,10 @@ export const MENU_ITEMS = [
         description: 'Classic North Indian kidney beans curry, best enjoyed with rice.',
         image: rajmaImg,
         variants: [
-            { name: 'Half', price: 70 },
-            { name: 'Full', price: 130 }
+            { name: 'Quarter (250 ml)', price: 70 },
+            { name: 'Half (500 ml)', price: 130 },
+            { name: 'Full (750 ml)', price: 200 },
+            { name: '1 Litre', price: 260 }
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -433,6 +436,17 @@ export const MENU_ITEMS = [
         isVeg: true,
         rating: 4.5,
         reviewCount: 18
+    },
+    {
+        id: 'tawa-roti-ghee',
+        name: 'Tawa Roti (Ghee)',
+        category: 'Breads',
+        description: 'Soft whole wheat flatbread topped with desi ghee.',
+        image: tawaRotiGheeImg,
+        price: 12,
+        isVeg: true,
+        rating: 4.7,
+        reviewCount: 20
     },
     {
         id: 'plain-paratha',
