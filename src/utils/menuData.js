@@ -17,13 +17,13 @@ import muttonBhunaImg from '../assets/dishes/mutton_bhuna.jpg';
 import tawaChickenImg from '../assets/dishes/tawa_chicken.png';
 import chilliChickenImg from '../assets/dishes/chilli_chicken.jpg';
 import chickenSteamedMomosImg from '../assets/dishes/chicken_steamed_momos_final.png';
-import vegCrunchyMomosImg from '../assets/dishes/veg_crunchy_momos_final.png';
+import vegFriedMomosImg from '../assets/dishes/veg_fried_momos.png';
 import chickenCrunchyMomosImg from '../assets/dishes/chicken_crunchy_momos_v2.jpg';
 import butterChickenMomosImg from '../assets/dishes/butter_chicken_gravy_momos_final.png';
-import paneerCrunchyMomosImg from '../assets/dishes/paneer_crunchy_momos_final.png';
+import paneerFriedMomosImg from '../assets/dishes/paneer_fried_momos.jpg';
 import mixedVegSteamedMomosImg from '../assets/dishes/mixed_veg_steamed_momos_final.png';
 import paneerSteamedMomosImg from '../assets/dishes/paneer_steamed_momos_v2.png';
-import chickenFriedMomosImg from '../assets/dishes/chicken_fried_momos_v2.jpg';
+import chickenFriedMomosImg from '../assets/dishes/chicken_fried_momos_v3.jpg';
 import vegManchowImg from '../assets/dishes/veg_manchow.png';
 import chickenManchowImg from '../assets/dishes/chicken_manchow.png';
 import boondiRaitaImg from '../assets/dishes/boondi_raita.png';
@@ -49,6 +49,10 @@ import cholePuriImg from '../assets/dishes/chole_puri.jpg';
 import vegFriedRiceImg from '../assets/dishes/veg_fried_rice.jpg';
 import eggFriedRiceImg from '../assets/dishes/egg_fried_rice.jpg';
 import tawaRotiGheeImg from '../assets/dishes/tawa_roti_ghee.png';
+import chilliPaneerDryImg from '../assets/dishes/chilli_paneer_dry.jpg';
+import chilliPaneerGravyImg from '../assets/dishes/chilli_paneer_gravy.jpg';
+import chilliChickenDryImg from '../assets/dishes/chilli_chicken_dry.png';
+import chilliChickenGravyImg from '../assets/dishes/chilli_chicken_gravy_v2.jpg';
 
 export const CATEGORIES = [
     "Main Course (Veg)",
@@ -177,11 +181,26 @@ export const MENU_ITEMS = [
     },
 
     {
-        id: 'chilli-paneer',
-        name: 'Chilli Paneer (Dry/Gravy)',
+        id: 'chilli-paneer-dry',
+        name: 'Chilli Paneer (Dry)',
         category: 'Main Course (Veg)',
         description: 'Cottage cheese cubes tossed in spicy chilli sauce with peppers.',
-        image: kadaiPaneerImg,
+        image: chilliPaneerDryImg,
+        variants: [
+            { name: 'Half', price: 160 },
+            { name: 'Full', price: 280 }
+        ],
+        isVeg: true,
+        hasSpicyOption: true,
+        rating: 4.7,
+        reviewCount: 12
+    },
+    {
+        id: 'chilli-paneer-gravy',
+        name: 'Chilli Paneer (Gravy)',
+        category: 'Main Course (Veg)',
+        description: 'Cottage cheese cubes in a rich, spicy chilli gravy with peppers.',
+        image: chilliPaneerGravyImg,
         variants: [
             { name: 'Half', price: 160 },
             { name: 'Full', price: 280 }
@@ -260,11 +279,26 @@ export const MENU_ITEMS = [
 
 
     {
-        id: 'chilli-chicken',
-        name: 'Chilli Chicken (Dry/Gravy)',
+        id: 'chilli-chicken-dry',
+        name: 'Chilli Chicken (Dry)',
         category: 'Main Course (Non-Veg)',
-        description: 'Spicy Indo-Chinese chicken. Available in Dry or Gravy style.',
-        image: chilliChickenImg,
+        description: 'Spicy Indo-Chinese chicken tossed with peppers and onions.',
+        image: chilliChickenDryImg,
+        variants: [
+            { name: 'Half', price: 180 },
+            { name: 'Full', price: 320 }
+        ],
+        isVeg: false,
+        hasSpicyOption: true,
+        rating: 4.6,
+        reviewCount: 14
+    },
+    {
+        id: 'chilli-chicken-gravy',
+        name: 'Chilli Chicken (Gravy)',
+        category: 'Main Course (Non-Veg)',
+        description: 'Spicy Indo-Chinese chicken in a rich, flavorful gravy.',
+        image: chilliChickenGravyImg,
         variants: [
             { name: 'Half', price: 180 },
             { name: 'Full', price: 320 }
@@ -340,7 +374,7 @@ export const MENU_ITEMS = [
         name: 'Paneer Fried Momos',
         category: 'Fried Momos',
         description: 'Crunchy fried momos with a soft paneer filling.',
-        image: paneerCrunchyMomosImg,
+        image: paneerFriedMomosImg,
         variants: [
             { name: 'Half (5 pcs)', price: 85 },
             { name: 'Full (10 pcs)', price: 145 }
@@ -354,7 +388,7 @@ export const MENU_ITEMS = [
         name: 'Veg Fried Momos',
         category: 'Fried Momos',
         description: 'Crispy fried vegetable momos served with spicy chutney.',
-        image: vegCrunchyMomosImg,
+        image: vegFriedMomosImg,
         variants: [
             { name: 'Half (5 pcs)', price: 65 },
             { name: 'Full (10 pcs)', price: 115 }
