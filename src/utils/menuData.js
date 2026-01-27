@@ -17,11 +17,11 @@ import muttonBhunaImg from '../assets/dishes/mutton_bhuna.jpg';
 import tawaChickenImg from '../assets/dishes/tawa_chicken.png';
 import chilliChickenImg from '../assets/dishes/chilli_chicken.jpg';
 import chickenSteamedMomosImg from '../assets/dishes/chicken_steamed_momos_final.png';
-import vegFriedMomosImg from '../assets/dishes/veg_fried_momos.png';
+import vegFriedMomosImg from '../assets/dishes/veg_fried_momos_v2.jpg';
 import chickenCrunchyMomosImg from '../assets/dishes/chicken_crunchy_momos_v2.jpg';
 import butterChickenMomosImg from '../assets/dishes/butter_chicken_gravy_momos_final.png';
 import paneerFriedMomosImg from '../assets/dishes/paneer_fried_momos.jpg';
-import mixedVegSteamedMomosImg from '../assets/dishes/mixed_veg_steamed_momos_final.png';
+import mixedVegSteamedMomosImg from '../assets/dishes/veg_steamed_momos_v2.jpg';
 import paneerSteamedMomosImg from '../assets/dishes/paneer_steamed_momos_v2.png';
 import chickenFriedMomosImg from '../assets/dishes/chicken_fried_momos_v3.jpg';
 import vegManchowImg from '../assets/dishes/veg_manchow.png';
@@ -526,21 +526,13 @@ export const MENU_ITEMS = [
         category: 'Breads',
         description: 'Soft whole wheat flatbread cooked on a griddle.',
         image: tawaRotiImg,
-        price: 8,
+        variants: [
+            { name: 'Regular', price: 8 },
+            { name: 'With Ghee', price: 12 }
+        ],
         isVeg: true,
-        rating: 4.5,
-        reviewCount: 18
-    },
-    {
-        id: 'tawa-roti-ghee',
-        name: 'Tawa Roti (Ghee)',
-        category: 'Breads',
-        description: 'Soft whole wheat flatbread topped with desi ghee.',
-        image: tawaRotiGheeImg,
-        price: 12,
-        isVeg: true,
-        rating: 4.7,
-        reviewCount: 20
+        rating: 4.6,
+        reviewCount: 38
     },
     {
         id: 'plain-paratha',
