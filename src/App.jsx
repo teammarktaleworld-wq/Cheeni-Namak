@@ -5,7 +5,7 @@ import HeroBanner from './components/HeroBanner';
 import Cart from './components/Cart';
 import ReviewCarousel from './components/ReviewCarousel';
 import DietaryToggle from './components/DietaryToggle';
-import FeaturesSection from './components/FeaturesSection';
+
 import { MENU_ITEMS, CATEGORIES } from './utils/menuData';
 
 // Decoration Images
@@ -88,8 +88,7 @@ const App = () => {
         {/* Sales-Oriented Hero Banner (Food Slides) */}
         <HeroBanner />
 
-        {/* Why Choose Us Features */}
-        <FeaturesSection />
+
 
         {/* Categories & Menu */}
         <div id="menu-section" className="pt-10">
