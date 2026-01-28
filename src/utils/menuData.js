@@ -53,10 +53,14 @@ import chilliPaneerDryImg from '../assets/dishes/chilli_paneer_dry.jpg';
 import chilliPaneerGravyImg from '../assets/dishes/chilli_paneer_gravy.jpg';
 import chilliChickenDryImg from '../assets/dishes/chilli_chicken_dry.png';
 import chilliChickenGravyImg from '../assets/dishes/chilli_chicken_gravy_v2.jpg';
+import rajmaChawalImg from '../assets/dishes/rajma_chawal.png';
+import kadhiChawalImg from '../assets/dishes/kadhi_chawal.jpg';
+import dalChawalImg from '../assets/dishes/dal_chawal.jpg';
 
 export const CATEGORIES = [
     "Main Course (Veg)",
     "Main Course (Non-Veg)",
+    "Combo Meals",
     "Steamed Momos",
     "Fried Momos",
     "Rice & Noodles",
@@ -65,6 +69,7 @@ export const CATEGORIES = [
 ];
 
 export const MENU_ITEMS = [
+
     // Main Course (Veg)
     {
         id: 'kadai-paneer',
@@ -307,6 +312,41 @@ export const MENU_ITEMS = [
         hasSpicyOption: true,
         rating: 4.6,
         reviewCount: 14
+    },
+
+    // Combo Meals
+    {
+        id: 'rajma-chawal',
+        name: 'Rajma Chawal',
+        category: 'Combo Meals',
+        description: 'Delicious kidney beans curry served with steamed rice.',
+        image: rajmaChawalImg,
+        price: 120,
+        isVeg: true,
+        rating: 4.8,
+        reviewCount: 25
+    },
+    {
+        id: 'kadhi-chawal',
+        name: 'Kadhi Chawal',
+        category: 'Combo Meals',
+        description: 'Traditional yogurt-based curry with fried dumplings served with rice.',
+        image: kadhiChawalImg,
+        price: 120,
+        isVeg: true,
+        rating: 4.7,
+        reviewCount: 20
+    },
+    {
+        id: 'dal-chawal',
+        name: 'Dal Chawal',
+        category: 'Combo Meals',
+        description: 'Comforting yellow lentils served with steamed basmati rice.',
+        image: dalChawalImg,
+        price: 120,
+        isVeg: true,
+        rating: 4.6,
+        reviewCount: 18
     },
 
     // Momos
