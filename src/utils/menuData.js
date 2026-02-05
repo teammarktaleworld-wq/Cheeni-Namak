@@ -256,8 +256,8 @@ export const MENU_ITEMS = [
         description: 'Boiled eggs simmered in a spicy onion-tomato gravy.',
         image: eggCurryImg,
         variants: [
-            { name: '2 Eggs', price: 70 },
-            { name: '4 Eggs', price: 130 }
+            { name: '2 Eggs', price: 80 },
+            { name: '4 Eggs', price: 140 }
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -445,7 +445,7 @@ export const MENU_ITEMS = [
         category: 'Soups & Sides',
         description: 'Spicy and tangy soup with crunchy fried noodles.',
         image: vegManchowImg,
-        price: 70,
+        price: 80,
         isVeg: true,
         rating: 4.1,
         reviewCount: 5
@@ -467,7 +467,10 @@ export const MENU_ITEMS = [
         category: 'Soups & Sides',
         description: 'Refreshing yogurt mixed with crispy boondi and mild spices.',
         image: boondiRaitaImg,
-        price: 50,
+        variants: [
+            { name: '250 ml', price: 50 },
+            { name: '500 ml', price: 90 }
+        ],
         isVeg: true,
         rating: 4.0,
         reviewCount: 4
@@ -602,7 +605,7 @@ export const MENU_ITEMS = [
         category: 'Breads',
         description: 'Paratha stuffed with a mix of spiced potatoes and onions.',
         image: alooPyazParathaImg,
-        price: 35,
+        price: 40,
         isVeg: true,
         rating: 4.8,
         reviewCount: 14
