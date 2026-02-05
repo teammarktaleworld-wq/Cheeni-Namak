@@ -570,7 +570,7 @@ export const MENU_ITEMS = [
         description: 'Soft whole wheat flatbread cooked on a griddle.',
         image: tawaRotiImg,
         variants: [
-            { name: 'Regular', price: 8 },
+            { name: 'Regular', price: 10 },
             { name: 'With Ghee', price: 12 }
         ],
         isVeg: true,
@@ -583,7 +583,7 @@ export const MENU_ITEMS = [
         category: 'Breads',
         description: 'Layered whole wheat flatbread, shallow fried.',
         image: plainParathaImg,
-        price: 15,
+        price: 18,
         isVeg: true,
         rating: 4.3,
         reviewCount: 9
