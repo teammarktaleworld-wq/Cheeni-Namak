@@ -56,7 +56,8 @@ import chilliChickenGravyImg from '../assets/dishes/chilli_chicken_gravy_v2.jpg'
 import rajmaChawalImg from '../assets/dishes/rajma_chawal.png';
 import kadhiChawalImg from '../assets/dishes/kadhi_chawal.jpg';
 import dalChawalImg from '../assets/dishes/dal_chawal.jpg';
-import yellowKhichdiImg from '../assets/dishes/yellow_khichdi.jpg';
+import yellowKhichdiImg from '../assets/dishes/yellow_khichdi_v2.png';
+import custardSevaiImg from '../assets/dishes/custard_sevai.png';
 
 export const CATEGORIES = [
     "Main Course (Veg)",
@@ -66,7 +67,8 @@ export const CATEGORIES = [
     "Fried Momos",
     "Rice & Noodles",
     "Breads",
-    "Soups & Sides"
+    "Soups & Sides",
+    "Sweets"
 ];
 
 export const MENU_ITEMS = [
@@ -640,5 +642,20 @@ export const MENU_ITEMS = [
         reviewCount: 10
     },
 
+    // Sweets
+    {
+        id: 'custard-sevai',
+        name: 'Custard Sevai',
+        category: 'Sweets',
+        description: 'Creamy custard dessert with vermicelli, topped with nuts and saffron.',
+        image: custardSevaiImg,
+        variants: [
+            { name: '250 ml', price: 100 },
+            { name: '500 ml', price: 190 }
+        ],
+        isVeg: true,
+        rating: 4.7,
+        reviewCount: 8
+    }
 
 ];
