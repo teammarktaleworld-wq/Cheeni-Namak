@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { calculateDeliveryCharge } from '../utils/deliveryUtils';
 
 const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, removeFromCart }) => {
-    const [couponCode, setCouponCode] = useState('');
-    const [appliedCoupon, setAppliedCoupon] = useState(null);
     const [distance, setDistance] = useState('');
     const [isLocating, setIsLocating] = useState(false);
     const [locationError, setLocationError] = useState('');
@@ -65,24 +63,7 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
     };
 
     const deliveryCharge = calculateDeliveryCharge(distance, total);
-
-    let discountRate = 0;
-    if (appliedCoupon === 'CN10') discountRate = 0.1;
-    else if (appliedCoupon === 'CN15') discountRate = 0.15;
-    else if (appliedCoupon === 'CN20') discountRate = 0.2;
-
-    const discountAmount = Math.round(total * discountRate);
-    const finalTotal = total - discountAmount + deliveryCharge;
-
-    const handleApplyCoupon = () => {
-        const code = couponCode.toUpperCase();
-        if (['CN10', 'CN15', 'CN20'].includes(code)) {
-            setAppliedCoupon(code);
-        } else {
-            alert('Invalid Coupon Code');
-            setAppliedCoupon(null);
-        }
-    };
+    const finalTotal = total + deliveryCharge;
 
     const generateWhatsAppLink = () => {
         const phoneNumber = "919217713285";
@@ -95,9 +76,6 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
         });
 
         message += `\n*Subtotal: ₹${total}*`;
-        if (discountAmount > 0) {
-            message += `\n*Discount (${appliedCoupon}): -₹${discountAmount}*`;
-        }
         message += `\n*Delivery Charge (${distance || 0} km): ₹${deliveryCharge}*`;
         message += `\n*Total Amount: ₹${finalTotal}*`;
         message += `\n\nPlease confirm my order.`;
@@ -243,43 +221,6 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
                                         </p>
                                     )}
                                 </div>
-
-                                {/* Coupon Section */}
-                                <div className="bg-gray-50 p-3 rounded-lg">
-                                    <label className="block text-sm font-bold text-brand-dark mb-1">
-                                        Coupon Code
-                                    </label>
-                                    <div className="flex gap-2">
-                                        <input
-                                            type="text"
-                                            value={couponCode}
-                                            onChange={(e) => setCouponCode(e.target.value)}
-                                            placeholder="Enter code"
-                                            className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand-red uppercase"
-                                            disabled={!!appliedCoupon}
-                                        />
-                                        {appliedCoupon ? (
-                                            <button
-                                                onClick={() => { setAppliedCoupon(null); setCouponCode(''); }}
-                                                className="bg-gray-200 text-gray-600 px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-300"
-                                            >
-                                                Remove
-                                            </button>
-                                        ) : (
-                                            <button
-                                                onClick={handleApplyCoupon}
-                                                className="bg-brand-dark text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-black"
-                                            >
-                                                Apply
-                                            </button>
-                                        )}
-                                    </div>
-                                    {appliedCoupon && (
-                                        <p className="text-xs text-green-600 mt-1 font-bold">
-                                            Coupon {appliedCoupon} applied! {Math.round(discountRate * 100)}% off.
-                                        </p>
-                                    )}
-                                </div>
                             </div>
 
                             <div className="mt-6 pt-4 border-t border-dashed border-gray-300 space-y-2">
@@ -287,12 +228,6 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
                                     <span>Subtotal</span>
                                     <span>₹{total}</span>
                                 </div>
-                                {discountAmount > 0 && (
-                                    <div className="flex justify-between text-sm text-green-600 font-bold">
-                                        <span>Discount ({Math.round(discountRate * 100)}%)</span>
-                                        <span>-₹{discountAmount}</span>
-                                    </div>
-                                )}
                                 <div className="flex justify-between text-sm text-gray-600">
                                     <span>Delivery Charges</span>
                                     <span>₹{deliveryCharge}</span>

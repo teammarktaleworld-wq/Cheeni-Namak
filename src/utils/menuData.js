@@ -122,6 +122,7 @@ export const MENU_ITEMS = [
         rating: 4.2,
         reviewCount: 8
     },
+
     {
         id: 'chole',
         name: 'Chole',
@@ -518,6 +519,22 @@ export const MENU_ITEMS = [
         isVeg: true,
         rating: 4.0,
         reviewCount: 3
+    },
+    {
+        id: 'yellow-khichdi',
+        name: 'Yellow Moong Dal Khichdi',
+        category: 'Rice & Noodles',
+        description: 'Comforting one-pot meal of rice and lentils cooked with mild spices.',
+        image: dalTadkaImg,
+        variants: [
+            { name: 'Half (500 ml)', price: 120 },
+            { name: 'Full (750 ml)', price: 150 },
+            { name: '1 Litre', price: 210 }
+        ],
+        isVeg: true,
+        hasSpicyOption: true,
+        rating: 4.5,
+        reviewCount: 10
     },
     {
         id: 'jeera-rice',
