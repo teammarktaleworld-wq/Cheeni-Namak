@@ -56,6 +56,7 @@ import chilliChickenGravyImg from '../assets/dishes/chilli_chicken_gravy_v2.jpg'
 import rajmaChawalImg from '../assets/dishes/rajma_chawal.png';
 import kadhiChawalImg from '../assets/dishes/kadhi_chawal.jpg';
 import dalChawalImg from '../assets/dishes/dal_chawal.jpg';
+import yellowKhichdiImg from '../assets/dishes/yellow_khichdi.jpg';
 
 export const CATEGORIES = [
     "Main Course (Veg)",
@@ -525,7 +526,7 @@ export const MENU_ITEMS = [
         name: 'Yellow Moong Dal Khichdi',
         category: 'Rice & Noodles',
         description: 'Comforting one-pot meal of rice and lentils cooked with mild spices.',
-        image: dalTadkaImg,
+        image: yellowKhichdiImg,
         variants: [
             { name: 'Half (500 ml)', price: 120 },
             { name: 'Full (750 ml)', price: 150 },
