@@ -58,6 +58,7 @@ import kadhiChawalImg from '../assets/dishes/kadhi_chawal.jpg';
 import dalChawalImg from '../assets/dishes/dal_chawal.jpg';
 import yellowKhichdiImg from '../assets/dishes/yellow_khichdi_v2.png';
 import custardSevaiImg from '../assets/dishes/custard_sevai.png';
+import curdRiceImg from '../assets/dishes/curd_rice.png';
 
 export const CATEGORIES = [
     "Main Course (Veg)",
@@ -580,6 +581,21 @@ export const MENU_ITEMS = [
         isVeg: false,
         rating: 4.6,
         reviewCount: 14
+    },
+    {
+        id: 'curd-rice',
+        name: 'Curd Rice',
+        category: 'Rice & Noodles',
+        description: 'Cooling yogurt rice tempered with mustard seeds, curry leaves, and spices.',
+        image: curdRiceImg,
+        variants: [
+            { name: 'Half (500 ml)', price: 135 },
+            { name: 'Full (750 ml)', price: 195 },
+            { name: '1 Litre', price: 240 }
+        ],
+        isVeg: true,
+        rating: 4.5,
+        reviewCount: 8
     },
 
     // Breads
