@@ -52,7 +52,7 @@ const RESTAURANT_COORDS = {
 
                 if (parseFloat(roadDistanceEst) > MAX_DELIVERY_RADIUS) {
                     setDistance('');
-                    setLocationError(`Sorry, we only deliver within ${MAX_DELIVERY_RADIUS}km of Dwarka, Delhi.`);
+                    setLocationError(`Sorry, we only deliver within ${MAX_DELIVERY_RADIUS}km of Muzaffarpur, Bihar.`);
                 } else {
                     setDistance(roadDistanceEst);
                 }
