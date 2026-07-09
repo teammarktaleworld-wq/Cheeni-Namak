@@ -7,7 +7,11 @@ const Cart = ({ cartItems, total, isOpen, onClose, removeItem, addToCart, remove
     const [locationError, setLocationError] = useState('');
 
     // Restaurant Coordinates (Sec 14, Dwarka, New Delhi)
-    const RESTAURANT_COORDS = { lat: 28.5983, lng: 77.0326 };
+    // const RESTAURANT_COORDS = { lat: 28.5983, lng: 77.0326 };
+const RESTAURANT_COORDS = {
+    lat: 26.1270262,
+    lng: 85.3606277,
+};
     const MAX_DELIVERY_RADIUS = 100; // km
 
     const calculateDistance = (lat1, lon1, lat2, lon2) => {
