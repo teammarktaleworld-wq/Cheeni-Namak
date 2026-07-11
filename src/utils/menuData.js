@@ -697,6 +697,587 @@
 
 
 
+// import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
+// import rajmaImg from '../assets/dishes/rajma.png';
+// import dalTadkaImg from '../assets/dishes/dal_tadka.png';
+// import butterChickenImg from '../assets/dishes/butter_chicken.png';
+// import choleImg from '../assets/dishes/chole_v2.jpg';
+// import kadhiPakodaImg from '../assets/dishes/kadhi_pakoda.png';
+// import paneerBhurjiImg from '../assets/dishes/paneer_bhurji.png';
+// import chickenCurryImg from '../assets/dishes/chicken_curry.png';
+// import eggCurryImg from '../assets/dishes/egg_curry.png';
+// import eggBhurjiImg from '../assets/dishes/egg_bhurji.png';
+// import vegManchowImg from '../assets/dishes/veg_manchow.png';
+// import chickenManchowImg from '../assets/dishes/chicken_manchow.png';
+// import boondiRaitaImg from '../assets/dishes/boondi_raita.png';
+// import vegChowmeinImg from '../assets/dishes/veg_chowmein.png';
+// import vegMacaroniImg from '../assets/dishes/veg_macaroni.jpg';
+// import plainRiceImg from '../assets/dishes/plain_rice.png';
+// import jeeraRiceImg from '../assets/dishes/jeera_rice.png';
+// import coldCoffeeImg from '../assets/dishes/cold_coffee_new.png';
+// import amritsariLassiImg from '../assets/dishes/amritsari_lassi.png';
+// import kesarBadamMilkImg from '../assets/dishes/kesar_badam_milk.png';
+// import jalebiDesiGheeImg from '../assets/dishes/jalebi_desi_ghee.png';
+// import motichurLadduImg from '../assets/dishes/motichur_laddu.png';
+// import besanLadduImg from '../assets/dishes/besan_laddu.png';
+// import kalaJamunImg from '../assets/dishes/kala_jamun.png';
+// import gulabJamunDryImg from '../assets/dishes/gulab_jamun_new.jpg';
+// import gujiyaMeethiImg from '../assets/dishes/gujiya_meethi.png';
+// import tawaRotiImg from '../assets/dishes/tawa_roti.png';
+// import plainParathaImg from '../assets/dishes/plain_paratha.png';
+// import puriImg from '../assets/dishes/puri.jpg';
+// import pyazParathaImg from '../assets/dishes/pyaz_paratha.jpg';
+// import alooPyazParathaImg from '../assets/dishes/aloo_pyaz_paratha.jpg';
+// import cholePuriImg from '../assets/dishes/chole_puri.jpg';
+// import vegFriedRiceImg from '../assets/dishes/veg_fried_rice.jpg';
+// import eggFriedRiceImg from '../assets/dishes/egg_fried_rice.jpg';
+// import chilliPaneerDryImg from '../assets/dishes/chilli_paneer_dry.jpg';
+// import chilliPaneerGravyImg from '../assets/dishes/chilli_paneer_gravy.jpg';
+// import chilliChickenDryImg from '../assets/dishes/chilli_chicken_dry.png';
+// import chilliChickenGravyImg from '../assets/dishes/chilli_chicken_gravy_v2.jpg';
+// import rajmaChawalImg from '../assets/dishes/rajma_chawal.png';
+// import kadhiChawalImg from '../assets/dishes/kadhi_chawal.jpg';
+// import dalChawalImg from '../assets/dishes/dal_chawal.jpg';
+// import yellowKhichdiImg from '../assets/dishes/yellow_khichdi_v2.png';
+// import custardSevaiImg from '../assets/dishes/custard_sevai.png';
+// import curdRiceImg from '../assets/dishes/curd_rice.png';
+
+// // ─── CATEGORIES (Momos removed) ──────────────────────────────────────────────
+// export const CATEGORIES = [
+//     "Main Course (Veg)",
+//     "Main Course (Non-Veg)",
+//     "Combo Meals",
+//     "Rice & Noodles",
+//     "Breads",
+//     "Soups & Sides",
+//     "Sweets"
+// ];
+
+// // ─── MENU ITEMS (All momos removed) ──────────────────────────────────────────
+// export const MENU_ITEMS = [
+
+//     // ── Main Course (Veg) ────────────────────────────────────────────────────
+//     {
+//         id: 'kadai-paneer',
+//         name: 'Kadai Paneer',
+//         category: 'Main Course (Veg)',
+//         description: 'Cottage cheese cooked in a spicy tomato-based gravy with bell peppers.',
+//         image: kadaiPaneerImg,
+//         variants: [
+//             { name: 'Quarter (250 ml)', price: 100 },
+//             { name: 'Half (500 ml)', price: 180 },
+//             { name: 'Full (750 ml)', price: 260 },
+//             { name: '1 Litre', price: 350 }
+//         ],
+//         isVeg: true,
+//         hasSpicyOption: true,
+//         rating: 4.8,
+//         reviewCount: 18
+//     },
+//     {
+//         id: 'rajma',
+//         name: 'Rajma',
+//         category: 'Main Course (Veg)',
+//         description: 'Classic North Indian kidney beans curry, best enjoyed with rice.',
+//         image: rajmaImg,
+//         variants: [
+//             { name: 'Quarter (250 ml)', price: 70 },
+//             { name: 'Half (500 ml)', price: 130 },
+//             { name: 'Full (750 ml)', price: 200 },
+//             { name: '1 Litre', price: 260 }
+//         ],
+//         isVeg: true,
+//         hasSpicyOption: true,
+//         rating: 4.5,
+//         reviewCount: 12
+//     },
+//     {
+//         id: 'dal-tadka',
+//         name: 'Dal Tadka (Toor Dal)',
+//         category: 'Main Course (Veg)',
+//         description: 'Yellow lentils tempered with ghee, cumin, garlic, and red chilies.',
+//         image: dalTadkaImg,
+//         variants: [
+//             { name: 'Quarter (250 ml)', price: 70 },
+//             { name: 'Half (500 ml)', price: 130 },
+//             { name: 'Full (750 ml)', price: 200 },
+//             { name: '1 Litre', price: 260 }
+//         ],
+//         isVeg: true,
+//         hasSpicyOption: true,
+//         rating: 4.2,
+//         reviewCount: 8
+//     },
+//     {
+//         id: 'chole',
+//         name: 'Chole',
+//         category: 'Main Course (Veg)',
+//         description: 'Spicy chickpeas cooked in a flavorful masala gravy.',
+//         image: choleImg,
+//         variants: [
+//             { name: 'Quarter (250 ml)', price: 70 },
+//             { name: 'Half (500 ml)', price: 130 },
+//             { name: 'Full (750 ml)', price: 200 },
+//             { name: '1 Litre', price: 260 }
+//         ],
+//         isVeg: true,
+//         hasSpicyOption: true,
+//         rating: 4.6,
+//         reviewCount: 15
+//     },
+//     {
+//         id: 'kadhi-pakoda',
+//         name: 'Kadhi Pakoda',
+//         category: 'Main Course (Veg)',
+//         description: 'Yogurt-based curry with fried gram flour dumplings.',
+//         image: kadhiPakodaImg,
+//         variants: [
+//             { name: 'Quarter (250 ml)', price: 70 },
+//             { name: 'Half (500 ml)', price: 130 },
+//             { name: 'Full (750 ml)', price: 200 },
+//             { name: '1 Litre', price: 260 }
+//         ],
+//         isVeg: true,
+//         hasSpicyOption: true,
+//         rating: 4.0,
+//         reviewCount: 6
+//     },
+//     {
+//         id: 'paneer-bhurji',
+//         name: 'Paneer Bhurji',
+//         category: 'Main Course (Veg)',
+//         description: 'Scrambled cottage cheese tossed with onions, tomatoes, and spices.',
+//         image: paneerBhurjiImg,
+//         variants: [
+//             { name: 'Quarter (250 ml)', price: 120 },
+//             { name: 'Half (500 ml)', price: 230 },
+//             { name: 'Full (750 ml)', price: 340 },
+//             { name: '1 Litre', price: 450 }
+//         ],
+//         isVeg: true,
+//         hasSpicyOption: true,
+//         rating: 4.7,
+//         reviewCount: 14
+//     },
+//     {
+//         id: 'chole-puri',
+//         name: 'Chole Puri (8 Puri)',
+//         category: 'Main Course (Veg)',
+//         description: 'Spicy chickpeas served with 8 fluffy puris.',
+//         image: cholePuriImg,
+//         price: 115,
+//         isVeg: true,
+//         rating: 4.8,
+//         reviewCount: 10
+//     },
+//     {
+//         id: 'chilli-paneer-dry',
+//         name: 'Chilli Paneer (Dry)',
+//         category: 'Main Course (Veg)',
+//         description: 'Cottage cheese cubes tossed in spicy chilli sauce with peppers.',
+//         image: chilliPaneerDryImg,
+//         variants: [
+//             { name: 'Half', price: 160 },
+//             { name: 'Full', price: 280 }
+//         ],
+//         isVeg: true,
+//         hasSpicyOption: true,
+//         rating: 4.7,
+//         reviewCount: 12
+//     },
+//     {
+//         id: 'chilli-paneer-gravy',
+//         name: 'Chilli Paneer (Gravy)',
+//         category: 'Main Course (Veg)',
+//         description: 'Cottage cheese cubes in a rich, spicy chilli gravy with peppers.',
+//         image: chilliPaneerGravyImg,
+//         variants: [
+//             { name: 'Half', price: 160 },
+//             { name: 'Full', price: 280 }
+//         ],
+//         isVeg: true,
+//         hasSpicyOption: true,
+//         rating: 4.7,
+//         reviewCount: 12
+//     },
+
+//     // ── Main Course (Non-Veg) ─────────────────────────────────────────────────
+//     {
+//         id: 'chicken-curry',
+//         name: 'Chicken Curry',
+//         category: 'Main Course (Non-Veg)',
+//         description: 'Traditional home-style chicken curry cooked with aromatic spices.',
+//         image: chickenCurryImg,
+//         variants: [
+//             { name: 'Qtr (3 pcs)', price: 185 },
+//             { name: 'Half (6 pcs)', price: 350 },
+//             { name: 'Full (9 pcs)', price: 500 }
+//         ],
+//         isVeg: false,
+//         hasSpicyOption: true,
+//         rating: 4.9,
+//         reviewCount: 19
+//     },
+//     {
+//         id: 'butter-chicken',
+//         name: 'Butter Chicken',
+//         category: 'Main Course (Non-Veg)',
+//         description: 'Tender chicken cooked in a rich, creamy tomato and butter gravy.',
+//         image: butterChickenImg,
+//         variants: [
+//             { name: 'Qtr (3 pcs)', price: 210 },
+//             { name: 'Half (6 pcs)', price: 380 },
+//             { name: 'Full (9 pcs)', price: 540 }
+//         ],
+//         isVeg: false,
+//         hasSpicyOption: true,
+//         rating: 5.0,
+//         reviewCount: 20
+//     },
+//     {
+//         id: 'egg-curry',
+//         name: 'Egg Curry',
+//         category: 'Main Course (Non-Veg)',
+//         description: 'Boiled eggs simmered in a spicy onion-tomato gravy.',
+//         image: eggCurryImg,
+//         variants: [
+//             { name: '2 Eggs', price: 80 },
+//             { name: '4 Eggs', price: 140 }
+//         ],
+//         isVeg: false,
+//         hasSpicyOption: true,
+//         rating: 4.3,
+//         reviewCount: 9
+//     },
+//     {
+//         id: 'egg-bhurji',
+//         name: 'Egg Bhurji',
+//         category: 'Main Course (Non-Veg)',
+//         description: 'Scrambled eggs spiced with onions, chilies, and coriander.',
+//         image: eggBhurjiImg,
+//         variants: [
+//             { name: 'Quarter (250 ml)', price: 80 },
+//             { name: 'Half (500 ml)', price: 150 },
+//             { name: 'Full (750 ml)', price: 220 },
+//             { name: '1 Litre', price: 290 }
+//         ],
+//         isVeg: false,
+//         hasSpicyOption: true,
+//         rating: 4.4,
+//         reviewCount: 7
+//     },
+//     {
+//         id: 'chilli-chicken-dry',
+//         name: 'Chilli Chicken (Dry)',
+//         category: 'Main Course (Non-Veg)',
+//         description: 'Spicy Indo-Chinese chicken tossed with peppers and onions.',
+//         image: chilliChickenDryImg,
+//         variants: [
+//             { name: 'Half', price: 180 },
+//             { name: 'Full', price: 320 }
+//         ],
+//         isVeg: false,
+//         hasSpicyOption: true,
+//         rating: 4.6,
+//         reviewCount: 14
+//     },
+//     {
+//         id: 'chilli-chicken-gravy',
+//         name: 'Chilli Chicken (Gravy)',
+//         category: 'Main Course (Non-Veg)',
+//         description: 'Spicy Indo-Chinese chicken in a rich, flavorful gravy.',
+//         image: chilliChickenGravyImg,
+//         variants: [
+//             { name: 'Half', price: 180 },
+//             { name: 'Full', price: 320 }
+//         ],
+//         isVeg: false,
+//         hasSpicyOption: true,
+//         rating: 4.6,
+//         reviewCount: 14
+//     },
+
+//     // ── Combo Meals ───────────────────────────────────────────────────────────
+//     {
+//         id: 'rajma-chawal',
+//         name: 'Rajma Chawal',
+//         category: 'Combo Meals',
+//         description: 'Delicious kidney beans curry served with steamed rice. (In Thali)',
+//         image: rajmaChawalImg,
+//         price: 120,
+//         isVeg: true,
+//         rating: 4.8,
+//         reviewCount: 25
+//     },
+//     {
+//         id: 'kadhi-chawal',
+//         name: 'Kadhi Chawal',
+//         category: 'Combo Meals',
+//         description: 'Traditional yogurt-based curry with fried dumplings served with rice. (In Thali)',
+//         image: kadhiChawalImg,
+//         price: 120,
+//         isVeg: true,
+//         rating: 4.7,
+//         reviewCount: 20
+//     },
+//     {
+//         id: 'dal-chawal',
+//         name: 'Dal Chawal',
+//         category: 'Combo Meals',
+//         description: 'Comforting yellow lentils served with steamed basmati rice. (In Thali)',
+//         image: dalChawalImg,
+//         price: 120,
+//         isVeg: true,
+//         rating: 4.6,
+//         reviewCount: 18
+//     },
+
+//     // ── Rice & Noodles ────────────────────────────────────────────────────────
+//     {
+//         id: 'veg-chowmein',
+//         name: 'Desi Veg Chowmein',
+//         category: 'Rice & Noodles',
+//         description: 'Stir-fried noodles with crunchy vegetables and soy sauce.',
+//         image: vegChowmeinImg,
+//         variants: [
+//             { name: 'Half', price: 60 },
+//             { name: 'Full', price: 110 }
+//         ],
+//         isVeg: true,
+//         rating: 4.4,
+//         reviewCount: 13
+//     },
+//     {
+//         id: 'veg-macaroni',
+//         name: 'Desi Veg Macaroni',
+//         category: 'Rice & Noodles',
+//         description: 'Indian-style macaroni pasta cooked with veggies and spices.',
+//         image: vegMacaroniImg,
+//         variants: [
+//             { name: 'Half', price: 60 },
+//             { name: 'Full', price: 110 }
+//         ],
+//         isVeg: true,
+//         rating: 3.9,
+//         reviewCount: 6
+//     },
+//     {
+//         id: 'plain-rice',
+//         name: 'Plain Rice',
+//         category: 'Rice & Noodles',
+//         description: 'Steamed basmati rice, fluffy and perfect for curries.',
+//         image: plainRiceImg,
+//         variants: [
+//             { name: 'Half', price: 60 },
+//             { name: 'Full', price: 110 }
+//         ],
+//         isVeg: true,
+//         rating: 4.0,
+//         reviewCount: 3
+//     },
+//     {
+//         id: 'yellow-khichdi',
+//         name: 'Yellow Moong Dal Khichdi',
+//         category: 'Rice & Noodles',
+//         description: 'Comforting one-pot meal of rice and lentils cooked with mild spices.',
+//         image: yellowKhichdiImg,
+//         variants: [
+//             { name: 'Half (500 ml)', price: 120 },
+//             { name: 'Full (750 ml)', price: 150 },
+//             { name: '1 Litre', price: 210 }
+//         ],
+//         isVeg: true,
+//         hasSpicyOption: true,
+//         rating: 4.5,
+//         reviewCount: 10
+//     },
+//     {
+//         id: 'jeera-rice',
+//         name: 'Jeera Rice',
+//         category: 'Rice & Noodles',
+//         description: 'Basmati rice tempered with cumin seeds and ghee.',
+//         image: jeeraRiceImg,
+//         variants: [
+//             { name: 'Half', price: 70 },
+//             { name: 'Full', price: 130 }
+//         ],
+//         isVeg: true,
+//         rating: 4.2,
+//         reviewCount: 5
+//     },
+//     {
+//         id: 'veg-fried-rice',
+//         name: 'Veg Fried Rice',
+//         category: 'Rice & Noodles',
+//         description: 'Aromatic basmati rice stir-fried with fresh vegetables.',
+//         image: vegFriedRiceImg,
+//         variants: [
+//             { name: 'Half', price: 70 },
+//             { name: 'Full', price: 130 }
+//         ],
+//         isVeg: true,
+//         rating: 4.5,
+//         reviewCount: 12
+//     },
+//     {
+//         id: 'egg-fried-rice',
+//         name: 'Egg Fried Rice',
+//         category: 'Rice & Noodles',
+//         description: 'Stir-fried rice with fluffy eggs and vegetables.',
+//         image: eggFriedRiceImg,
+//         variants: [
+//             { name: 'Half', price: 80 },
+//             { name: 'Full', price: 150 }
+//         ],
+//         isVeg: false,
+//         rating: 4.6,
+//         reviewCount: 14
+//     },
+//     {
+//         id: 'curd-rice',
+//         name: 'Curd Rice',
+//         category: 'Rice & Noodles',
+//         description: 'Cooling yogurt rice tempered with mustard seeds, curry leaves, and spices.',
+//         image: curdRiceImg,
+//         variants: [
+//             { name: 'Half (500 ml)', price: 135 },
+//             { name: 'Full (750 ml)', price: 195 },
+//             { name: '1 Litre', price: 240 }
+//         ],
+//         isVeg: true,
+//         rating: 4.5,
+//         reviewCount: 8
+//     },
+
+//     // ── Breads ────────────────────────────────────────────────────────────────
+//     {
+//         id: 'tawa-roti',
+//         name: 'Tawa Roti',
+//         category: 'Breads',
+//         description: 'Soft whole wheat flatbread cooked on a griddle.',
+//         image: tawaRotiImg,
+//         variants: [
+//             { name: 'Regular', price: 10 },
+//             { name: 'With Ghee', price: 12 }
+//         ],
+//         isVeg: true,
+//         rating: 4.6,
+//         reviewCount: 38
+//     },
+//     {
+//         id: 'plain-paratha',
+//         name: 'Plain Paratha',
+//         category: 'Breads',
+//         description: 'Layered whole wheat flatbread, shallow fried.',
+//         image: plainParathaImg,
+//         price: 18,
+//         isVeg: true,
+//         rating: 4.3,
+//         reviewCount: 9
+//     },
+//     {
+//         id: 'pyaz-paratha',
+//         name: 'Pyaz Paratha',
+//         category: 'Breads',
+//         description: 'Paratha stuffed with spiced chopped onions.',
+//         image: pyazParathaImg,
+//         price: 30,
+//         isVeg: true,
+//         rating: 4.7,
+//         reviewCount: 12
+//     },
+//     {
+//         id: 'aloo-pyaz-paratha',
+//         name: 'Aloo Pyaz Paratha',
+//         category: 'Breads',
+//         description: 'Paratha stuffed with a mix of spiced potatoes and onions.',
+//         image: alooPyazParathaImg,
+//         price: 40,
+//         isVeg: true,
+//         rating: 4.8,
+//         reviewCount: 14
+//     },
+//     {
+//         id: 'puri',
+//         name: 'Puri (6 pcs)',
+//         category: 'Breads',
+//         description: 'Deep-fried fluffy whole wheat bread.',
+//         image: puriImg,
+//         price: 40,
+//         isVeg: true,
+//         rating: 4.6,
+//         reviewCount: 10
+//     },
+
+//     // ── Soups & Sides ─────────────────────────────────────────────────────────
+//     {
+//         id: 'veg-manchow',
+//         name: 'Veg Manchow Soup',
+//         category: 'Soups & Sides',
+//         description: 'Spicy and tangy soup with crunchy fried noodles.',
+//         image: vegManchowImg,
+//         price: 80,
+//         isVeg: true,
+//         rating: 4.1,
+//         reviewCount: 5
+//     },
+//     {
+//         id: 'chicken-manchow',
+//         name: 'Chicken Manchow Soup',
+//         category: 'Soups & Sides',
+//         description: 'Hot and spicy chicken soup topped with crispy noodles.',
+//         image: chickenManchowImg,
+//         price: 110,
+//         isVeg: false,
+//         rating: 4.3,
+//         reviewCount: 8
+//     },
+//     {
+//         id: 'boondi-raita',
+//         name: 'Boondi Raita',
+//         category: 'Soups & Sides',
+//         description: 'Refreshing yogurt mixed with crispy boondi and mild spices.',
+//         image: boondiRaitaImg,
+//         variants: [
+//             { name: '250 ml', price: 50 },
+//             { name: '500 ml', price: 90 }
+//         ],
+//         isVeg: true,
+//         rating: 4.0,
+//         reviewCount: 4
+//     },
+
+//     // ── Sweets ────────────────────────────────────────────────────────────────
+//     {
+//         id: 'custard-sevai',
+//         name: 'Custard Sevai',
+//         category: 'Sweets',
+//         description: 'Creamy custard dessert with vermicelli, topped with nuts and saffron.',
+//         image: custardSevaiImg,
+//         variants: [
+//             { name: '250 ml', price: 100 },
+//             { name: '500 ml', price: 190 }
+//         ],
+//         isVeg: true,
+//         rating: 4.7,
+//         reviewCount: 8
+//     }
+// ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
 import rajmaImg from '../assets/dishes/rajma.png';
 import dalTadkaImg from '../assets/dishes/dal_tadka.png';
@@ -741,8 +1322,11 @@ import dalChawalImg from '../assets/dishes/dal_chawal.jpg';
 import yellowKhichdiImg from '../assets/dishes/yellow_khichdi_v2.png';
 import custardSevaiImg from '../assets/dishes/custard_sevai.png';
 import curdRiceImg from '../assets/dishes/curd_rice.png';
+// TODO: Add mutton dish images when available
+import muttonMasalaImg from '../assets/dishes/mutton_masala.png';
+import muttonBhunaImg from '../assets/dishes/mutton_bhuna.png';
 
-// ─── CATEGORIES (Momos removed) ──────────────────────────────────────────────
+// ─── CATEGORIES ───────────────────────────────────────────────────────────────
 export const CATEGORIES = [
     "Main Course (Veg)",
     "Main Course (Non-Veg)",
@@ -753,10 +1337,20 @@ export const CATEGORIES = [
     "Sweets"
 ];
 
-// ─── MENU ITEMS (All momos removed) ──────────────────────────────────────────
+// ─── PRICE UPDATE SUMMARY (applied below) ────────────────────────────────────
+// Paneer dishes:     +₹60 per variant
+// Chilli Chicken:    +₹30 per variant
+// Roti:              Regular → ₹12, With Ghee → ₹15
+// All Parathas:      +₹10 per item
+// Egg dishes:        +₹10 per variant
+// Other dishes:      +₹10 per variant  (excl. Combo Meals, new mutton items)
+// Combo Meals:       No change
+
 export const MENU_ITEMS = [
 
     // ── Main Course (Veg) ────────────────────────────────────────────────────
+
+    // Paneer dishes: original prices + ₹60
     {
         id: 'kadai-paneer',
         name: 'Kadai Paneer',
@@ -764,83 +1358,15 @@ export const MENU_ITEMS = [
         description: 'Cottage cheese cooked in a spicy tomato-based gravy with bell peppers.',
         image: kadaiPaneerImg,
         variants: [
-            { name: 'Quarter (250 ml)', price: 100 },
-            { name: 'Half (500 ml)', price: 180 },
-            { name: 'Full (750 ml)', price: 260 },
-            { name: '1 Litre', price: 350 }
+            { name: 'Quarter (250 ml)', price: 160 },  // 100 + 60
+            { name: 'Half (500 ml)',    price: 240 },  // 180 + 60
+            { name: 'Full (750 ml)',    price: 320 },  // 260 + 60
+            { name: '1 Litre',         price: 410 },  // 350 + 60
         ],
         isVeg: true,
         hasSpicyOption: true,
         rating: 4.8,
         reviewCount: 18
-    },
-    {
-        id: 'rajma',
-        name: 'Rajma',
-        category: 'Main Course (Veg)',
-        description: 'Classic North Indian kidney beans curry, best enjoyed with rice.',
-        image: rajmaImg,
-        variants: [
-            { name: 'Quarter (250 ml)', price: 70 },
-            { name: 'Half (500 ml)', price: 130 },
-            { name: 'Full (750 ml)', price: 200 },
-            { name: '1 Litre', price: 260 }
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.5,
-        reviewCount: 12
-    },
-    {
-        id: 'dal-tadka',
-        name: 'Dal Tadka (Toor Dal)',
-        category: 'Main Course (Veg)',
-        description: 'Yellow lentils tempered with ghee, cumin, garlic, and red chilies.',
-        image: dalTadkaImg,
-        variants: [
-            { name: 'Quarter (250 ml)', price: 70 },
-            { name: 'Half (500 ml)', price: 130 },
-            { name: 'Full (750 ml)', price: 200 },
-            { name: '1 Litre', price: 260 }
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.2,
-        reviewCount: 8
-    },
-    {
-        id: 'chole',
-        name: 'Chole',
-        category: 'Main Course (Veg)',
-        description: 'Spicy chickpeas cooked in a flavorful masala gravy.',
-        image: choleImg,
-        variants: [
-            { name: 'Quarter (250 ml)', price: 70 },
-            { name: 'Half (500 ml)', price: 130 },
-            { name: 'Full (750 ml)', price: 200 },
-            { name: '1 Litre', price: 260 }
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.6,
-        reviewCount: 15
-    },
-    {
-        id: 'kadhi-pakoda',
-        name: 'Kadhi Pakoda',
-        category: 'Main Course (Veg)',
-        description: 'Yogurt-based curry with fried gram flour dumplings.',
-        image: kadhiPakodaImg,
-        variants: [
-            { name: 'Quarter (250 ml)', price: 70 },
-            { name: 'Half (500 ml)', price: 130 },
-            { name: 'Full (750 ml)', price: 200 },
-            { name: '1 Litre', price: 260 }
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.0,
-        reviewCount: 6
     },
     {
         id: 'paneer-bhurji',
@@ -849,26 +1375,15 @@ export const MENU_ITEMS = [
         description: 'Scrambled cottage cheese tossed with onions, tomatoes, and spices.',
         image: paneerBhurjiImg,
         variants: [
-            { name: 'Quarter (250 ml)', price: 120 },
-            { name: 'Half (500 ml)', price: 230 },
-            { name: 'Full (750 ml)', price: 340 },
-            { name: '1 Litre', price: 450 }
+            { name: 'Quarter (250 ml)', price: 180 },  // 120 + 60
+            { name: 'Half (500 ml)',    price: 290 },  // 230 + 60
+            { name: 'Full (750 ml)',    price: 400 },  // 340 + 60
+            { name: '1 Litre',         price: 510 },  // 450 + 60
         ],
         isVeg: true,
         hasSpicyOption: true,
         rating: 4.7,
         reviewCount: 14
-    },
-    {
-        id: 'chole-puri',
-        name: 'Chole Puri (8 Puri)',
-        category: 'Main Course (Veg)',
-        description: 'Spicy chickpeas served with 8 fluffy puris.',
-        image: cholePuriImg,
-        price: 115,
-        isVeg: true,
-        rating: 4.8,
-        reviewCount: 10
     },
     {
         id: 'chilli-paneer-dry',
@@ -877,8 +1392,8 @@ export const MENU_ITEMS = [
         description: 'Cottage cheese cubes tossed in spicy chilli sauce with peppers.',
         image: chilliPaneerDryImg,
         variants: [
-            { name: 'Half', price: 160 },
-            { name: 'Full', price: 280 }
+            { name: 'Half', price: 220 },  // 160 + 60
+            { name: 'Full', price: 340 },  // 280 + 60
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -892,8 +1407,8 @@ export const MENU_ITEMS = [
         description: 'Cottage cheese cubes in a rich, spicy chilli gravy with peppers.',
         image: chilliPaneerGravyImg,
         variants: [
-            { name: 'Half', price: 160 },
-            { name: 'Full', price: 280 }
+            { name: 'Half', price: 220 },  // 160 + 60
+            { name: 'Full', price: 340 },  // 280 + 60
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -901,7 +1416,90 @@ export const MENU_ITEMS = [
         reviewCount: 12
     },
 
+    // Other Veg dishes: original prices + ₹10
+    {
+        id: 'rajma',
+        name: 'Rajma',
+        category: 'Main Course (Veg)',
+        description: 'Classic North Indian kidney beans curry, best enjoyed with rice.',
+        image: rajmaImg,
+        variants: [
+            { name: 'Quarter (250 ml)', price: 80  },  // 70 + 10
+            { name: 'Half (500 ml)',    price: 140 },  // 130 + 10
+            { name: 'Full (750 ml)',    price: 210 },  // 200 + 10
+            { name: '1 Litre',         price: 270 },  // 260 + 10
+        ],
+        isVeg: true,
+        hasSpicyOption: true,
+        rating: 4.5,
+        reviewCount: 12
+    },
+    {
+        id: 'dal-tadka',
+        name: 'Dal Tadka (Toor Dal)',
+        category: 'Main Course (Veg)',
+        description: 'Yellow lentils tempered with ghee, cumin, garlic, and red chilies.',
+        image: dalTadkaImg,
+        variants: [
+            { name: 'Quarter (250 ml)', price: 80  },  // 70 + 10
+            { name: 'Half (500 ml)',    price: 140 },  // 130 + 10
+            { name: 'Full (750 ml)',    price: 210 },  // 200 + 10
+            { name: '1 Litre',         price: 270 },  // 260 + 10
+        ],
+        isVeg: true,
+        hasSpicyOption: true,
+        rating: 4.2,
+        reviewCount: 8
+    },
+    {
+        id: 'chole',
+        name: 'Chole',
+        category: 'Main Course (Veg)',
+        description: 'Spicy chickpeas cooked in a flavorful masala gravy.',
+        image: choleImg,
+        variants: [
+            { name: 'Quarter (250 ml)', price: 80  },  // 70 + 10
+            { name: 'Half (500 ml)',    price: 140 },  // 130 + 10
+            { name: 'Full (750 ml)',    price: 210 },  // 200 + 10
+            { name: '1 Litre',         price: 270 },  // 260 + 10
+        ],
+        isVeg: true,
+        hasSpicyOption: true,
+        rating: 4.6,
+        reviewCount: 15
+    },
+    {
+        id: 'kadhi-pakoda',
+        name: 'Kadhi Pakoda',
+        category: 'Main Course (Veg)',
+        description: 'Yogurt-based curry with fried gram flour dumplings.',
+        image: kadhiPakodaImg,
+        variants: [
+            { name: 'Quarter (250 ml)', price: 80  },  // 70 + 10
+            { name: 'Half (500 ml)',    price: 140 },  // 130 + 10
+            { name: 'Full (750 ml)',    price: 210 },  // 200 + 10
+            { name: '1 Litre',         price: 270 },  // 260 + 10
+        ],
+        isVeg: true,
+        hasSpicyOption: true,
+        rating: 4.0,
+        reviewCount: 6
+    },
+    {
+        id: 'chole-puri',
+        name: 'Chole Puri (8 Puri)',
+        category: 'Main Course (Veg)',
+        description: 'Spicy chickpeas served with 8 fluffy puris.',
+        image: cholePuriImg,
+        price: 125,  // 115 + 10
+        isVeg: true,
+        rating: 4.8,
+        reviewCount: 10
+    },
+
     // ── Main Course (Non-Veg) ─────────────────────────────────────────────────
+
+    // Chicken dishes: original prices + ₹10
     {
         id: 'chicken-curry',
         name: 'Chicken Curry',
@@ -909,9 +1507,9 @@ export const MENU_ITEMS = [
         description: 'Traditional home-style chicken curry cooked with aromatic spices.',
         image: chickenCurryImg,
         variants: [
-            { name: 'Qtr (3 pcs)', price: 185 },
-            { name: 'Half (6 pcs)', price: 350 },
-            { name: 'Full (9 pcs)', price: 500 }
+            { name: 'Qtr (3 pcs)', price: 195 },  // 185 + 10
+            { name: 'Half (6 pcs)', price: 360 }, // 350 + 10
+            { name: 'Full (9 pcs)', price: 510 }, // 500 + 10
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -925,47 +1523,51 @@ export const MENU_ITEMS = [
         description: 'Tender chicken cooked in a rich, creamy tomato and butter gravy.',
         image: butterChickenImg,
         variants: [
-            { name: 'Qtr (3 pcs)', price: 210 },
-            { name: 'Half (6 pcs)', price: 380 },
-            { name: 'Full (9 pcs)', price: 540 }
+            { name: 'Qtr (3 pcs)', price: 220 },  // 210 + 10
+            { name: 'Half (6 pcs)', price: 390 }, // 380 + 10
+            { name: 'Full (9 pcs)', price: 550 }, // 540 + 10
         ],
         isVeg: false,
         hasSpicyOption: true,
         rating: 5.0,
         reviewCount: 20
     },
+
+    // Mutton dishes: new items (no base price change rule — added as-is)
     {
-        id: 'egg-curry',
-        name: 'Egg Curry',
+        id: 'mutton-masala-gravy',
+        name: 'Mutton Masala Gravy',
         category: 'Main Course (Non-Veg)',
-        description: 'Boiled eggs simmered in a spicy onion-tomato gravy.',
-        image: eggCurryImg,
+        description: 'Tender mutton pieces slow-cooked in a rich, aromatic masala gravy.',
+        image: muttonMasalaImg, // placeholder — replace with muttonMasalaImg when available
         variants: [
-            { name: '2 Eggs', price: 80 },
-            { name: '4 Eggs', price: 140 }
+            { name: 'Qtr (3 pcs)',  price: 240 },
+            { name: 'Half (6 pcs)', price: 460 },
+            { name: 'Full (9 pcs)', price: 680 },
         ],
         isVeg: false,
         hasSpicyOption: true,
-        rating: 4.3,
-        reviewCount: 9
+        rating: 4.8,
+        reviewCount: 0
     },
     {
-        id: 'egg-bhurji',
-        name: 'Egg Bhurji',
+        id: 'mutton-bhuna',
+        name: 'Mutton Bhuna',
         category: 'Main Course (Non-Veg)',
-        description: 'Scrambled eggs spiced with onions, chilies, and coriander.',
-        image: eggBhurjiImg,
+        description: 'Succulent mutton cooked dry-style with bold bhuna spices until deeply caramelized.',
+        image: muttonBhunaImg, // placeholder — replace with muttonBhunaImg when available
         variants: [
-            { name: 'Quarter (250 ml)', price: 80 },
-            { name: 'Half (500 ml)', price: 150 },
-            { name: 'Full (750 ml)', price: 220 },
-            { name: '1 Litre', price: 290 }
+            { name: 'Qtr (3 pcs)',  price: 240 },
+            { name: 'Half (6 pcs)', price: 460 },
+            { name: 'Full (9 pcs)', price: 680 },
         ],
         isVeg: false,
         hasSpicyOption: true,
-        rating: 4.4,
-        reviewCount: 7
+        rating: 4.8,
+        reviewCount: 0
     },
+
+    // Chilli Chicken: original prices + ₹30
     {
         id: 'chilli-chicken-dry',
         name: 'Chilli Chicken (Dry)',
@@ -973,8 +1575,8 @@ export const MENU_ITEMS = [
         description: 'Spicy Indo-Chinese chicken tossed with peppers and onions.',
         image: chilliChickenDryImg,
         variants: [
-            { name: 'Half', price: 180 },
-            { name: 'Full', price: 320 }
+            { name: 'Half', price: 210 },  // 180 + 30
+            { name: 'Full', price: 350 },  // 320 + 30
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -988,8 +1590,8 @@ export const MENU_ITEMS = [
         description: 'Spicy Indo-Chinese chicken in a rich, flavorful gravy.',
         image: chilliChickenGravyImg,
         variants: [
-            { name: 'Half', price: 180 },
-            { name: 'Full', price: 320 }
+            { name: 'Half', price: 210 },  // 180 + 30
+            { name: 'Full', price: 350 },  // 320 + 30
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -997,7 +1599,41 @@ export const MENU_ITEMS = [
         reviewCount: 14
     },
 
-    // ── Combo Meals ───────────────────────────────────────────────────────────
+    // Egg dishes: original prices + ₹10
+    {
+        id: 'egg-curry',
+        name: 'Egg Curry',
+        category: 'Main Course (Non-Veg)',
+        description: 'Boiled eggs simmered in a spicy onion-tomato gravy.',
+        image: eggCurryImg,
+        variants: [
+            { name: '2 Eggs', price: 90  },  // 80 + 10
+            { name: '4 Eggs', price: 150 },  // 140 + 10
+        ],
+        isVeg: false,
+        hasSpicyOption: true,
+        rating: 4.3,
+        reviewCount: 9
+    },
+    {
+        id: 'egg-bhurji',
+        name: 'Egg Bhurji',
+        category: 'Main Course (Non-Veg)',
+        description: 'Scrambled eggs spiced with onions, chilies, and coriander.',
+        image: eggBhurjiImg,
+        variants: [
+            { name: 'Quarter (250 ml)', price: 90  },  // 80 + 10
+            { name: 'Half (500 ml)',    price: 160 },  // 150 + 10
+            { name: 'Full (750 ml)',    price: 230 },  // 220 + 10
+            { name: '1 Litre',         price: 300 },  // 290 + 10
+        ],
+        isVeg: false,
+        hasSpicyOption: true,
+        rating: 4.4,
+        reviewCount: 7
+    },
+
+    // ── Combo Meals — NO CHANGE ───────────────────────────────────────────────
     {
         id: 'rajma-chawal',
         name: 'Rajma Chawal',
@@ -1032,7 +1668,7 @@ export const MENU_ITEMS = [
         reviewCount: 18
     },
 
-    // ── Rice & Noodles ────────────────────────────────────────────────────────
+    // ── Rice & Noodles: original prices + ₹10 ────────────────────────────────
     {
         id: 'veg-chowmein',
         name: 'Desi Veg Chowmein',
@@ -1040,8 +1676,8 @@ export const MENU_ITEMS = [
         description: 'Stir-fried noodles with crunchy vegetables and soy sauce.',
         image: vegChowmeinImg,
         variants: [
-            { name: 'Half', price: 60 },
-            { name: 'Full', price: 110 }
+            { name: 'Half', price: 70  },  // 60 + 10
+            { name: 'Full', price: 120 },  // 110 + 10
         ],
         isVeg: true,
         rating: 4.4,
@@ -1054,8 +1690,8 @@ export const MENU_ITEMS = [
         description: 'Indian-style macaroni pasta cooked with veggies and spices.',
         image: vegMacaroniImg,
         variants: [
-            { name: 'Half', price: 60 },
-            { name: 'Full', price: 110 }
+            { name: 'Half', price: 70  },  // 60 + 10
+            { name: 'Full', price: 120 },  // 110 + 10
         ],
         isVeg: true,
         rating: 3.9,
@@ -1068,8 +1704,8 @@ export const MENU_ITEMS = [
         description: 'Steamed basmati rice, fluffy and perfect for curries.',
         image: plainRiceImg,
         variants: [
-            { name: 'Half', price: 60 },
-            { name: 'Full', price: 110 }
+            { name: 'Half', price: 70  },  // 60 + 10
+            { name: 'Full', price: 120 },  // 110 + 10
         ],
         isVeg: true,
         rating: 4.0,
@@ -1082,9 +1718,9 @@ export const MENU_ITEMS = [
         description: 'Comforting one-pot meal of rice and lentils cooked with mild spices.',
         image: yellowKhichdiImg,
         variants: [
-            { name: 'Half (500 ml)', price: 120 },
-            { name: 'Full (750 ml)', price: 150 },
-            { name: '1 Litre', price: 210 }
+            { name: 'Half (500 ml)', price: 130 },  // 120 + 10
+            { name: 'Full (750 ml)', price: 160 },  // 150 + 10
+            { name: '1 Litre',       price: 220 },  // 210 + 10
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -1098,8 +1734,8 @@ export const MENU_ITEMS = [
         description: 'Basmati rice tempered with cumin seeds and ghee.',
         image: jeeraRiceImg,
         variants: [
-            { name: 'Half', price: 70 },
-            { name: 'Full', price: 130 }
+            { name: 'Half', price: 80  },  // 70 + 10
+            { name: 'Full', price: 140 },  // 130 + 10
         ],
         isVeg: true,
         rating: 4.2,
@@ -1112,8 +1748,8 @@ export const MENU_ITEMS = [
         description: 'Aromatic basmati rice stir-fried with fresh vegetables.',
         image: vegFriedRiceImg,
         variants: [
-            { name: 'Half', price: 70 },
-            { name: 'Full', price: 130 }
+            { name: 'Half', price: 80  },  // 70 + 10
+            { name: 'Full', price: 140 },  // 130 + 10
         ],
         isVeg: true,
         rating: 4.5,
@@ -1126,8 +1762,8 @@ export const MENU_ITEMS = [
         description: 'Stir-fried rice with fluffy eggs and vegetables.',
         image: eggFriedRiceImg,
         variants: [
-            { name: 'Half', price: 80 },
-            { name: 'Full', price: 150 }
+            { name: 'Half', price: 90  },  // 80 + 10
+            { name: 'Full', price: 160 },  // 150 + 10
         ],
         isVeg: false,
         rating: 4.6,
@@ -1140,9 +1776,9 @@ export const MENU_ITEMS = [
         description: 'Cooling yogurt rice tempered with mustard seeds, curry leaves, and spices.',
         image: curdRiceImg,
         variants: [
-            { name: 'Half (500 ml)', price: 135 },
-            { name: 'Full (750 ml)', price: 195 },
-            { name: '1 Litre', price: 240 }
+            { name: 'Half (500 ml)', price: 145 },  // 135 + 10
+            { name: 'Full (750 ml)', price: 205 },  // 195 + 10
+            { name: '1 Litre',       price: 250 },  // 240 + 10
         ],
         isVeg: true,
         rating: 4.5,
@@ -1150,6 +1786,8 @@ export const MENU_ITEMS = [
     },
 
     // ── Breads ────────────────────────────────────────────────────────────────
+
+    // Roti: fixed prices as specified
     {
         id: 'tawa-roti',
         name: 'Tawa Roti',
@@ -1157,20 +1795,22 @@ export const MENU_ITEMS = [
         description: 'Soft whole wheat flatbread cooked on a griddle.',
         image: tawaRotiImg,
         variants: [
-            { name: 'Regular', price: 10 },
-            { name: 'With Ghee', price: 12 }
+            { name: 'Regular',   price: 12 },  // fixed
+            { name: 'With Ghee', price: 15 },  // fixed
         ],
         isVeg: true,
         rating: 4.6,
         reviewCount: 38
     },
+
+    // All Parathas: original prices + ₹10
     {
         id: 'plain-paratha',
         name: 'Plain Paratha',
         category: 'Breads',
         description: 'Layered whole wheat flatbread, shallow fried.',
         image: plainParathaImg,
-        price: 18,
+        price: 28,  // 18 + 10
         isVeg: true,
         rating: 4.3,
         reviewCount: 9
@@ -1181,7 +1821,7 @@ export const MENU_ITEMS = [
         category: 'Breads',
         description: 'Paratha stuffed with spiced chopped onions.',
         image: pyazParathaImg,
-        price: 30,
+        price: 40,  // 30 + 10
         isVeg: true,
         rating: 4.7,
         reviewCount: 12
@@ -1192,31 +1832,33 @@ export const MENU_ITEMS = [
         category: 'Breads',
         description: 'Paratha stuffed with a mix of spiced potatoes and onions.',
         image: alooPyazParathaImg,
-        price: 40,
+        price: 50,  // 40 + 10
         isVeg: true,
         rating: 4.8,
         reviewCount: 14
     },
+
+    // Puri: original price + ₹10
     {
         id: 'puri',
         name: 'Puri (6 pcs)',
         category: 'Breads',
         description: 'Deep-fried fluffy whole wheat bread.',
         image: puriImg,
-        price: 40,
+        price: 50,  // 40 + 10
         isVeg: true,
         rating: 4.6,
         reviewCount: 10
     },
 
-    // ── Soups & Sides ─────────────────────────────────────────────────────────
+    // ── Soups & Sides: original prices + ₹10 ─────────────────────────────────
     {
         id: 'veg-manchow',
         name: 'Veg Manchow Soup',
         category: 'Soups & Sides',
         description: 'Spicy and tangy soup with crunchy fried noodles.',
         image: vegManchowImg,
-        price: 80,
+        price: 90,  // 80 + 10
         isVeg: true,
         rating: 4.1,
         reviewCount: 5
@@ -1227,7 +1869,7 @@ export const MENU_ITEMS = [
         category: 'Soups & Sides',
         description: 'Hot and spicy chicken soup topped with crispy noodles.',
         image: chickenManchowImg,
-        price: 110,
+        price: 120,  // 110 + 10
         isVeg: false,
         rating: 4.3,
         reviewCount: 8
@@ -1239,15 +1881,15 @@ export const MENU_ITEMS = [
         description: 'Refreshing yogurt mixed with crispy boondi and mild spices.',
         image: boondiRaitaImg,
         variants: [
-            { name: '250 ml', price: 50 },
-            { name: '500 ml', price: 90 }
+            { name: '250 ml', price: 60 },  // 50 + 10
+            { name: '500 ml', price: 100 }, // 90 + 10
         ],
         isVeg: true,
         rating: 4.0,
         reviewCount: 4
     },
 
-    // ── Sweets ────────────────────────────────────────────────────────────────
+    // ── Sweets: original prices + ₹10 ────────────────────────────────────────
     {
         id: 'custard-sevai',
         name: 'Custard Sevai',
@@ -1255,11 +1897,11 @@ export const MENU_ITEMS = [
         description: 'Creamy custard dessert with vermicelli, topped with nuts and saffron.',
         image: custardSevaiImg,
         variants: [
-            { name: '250 ml', price: 100 },
-            { name: '500 ml', price: 190 }
+            { name: '250 ml', price: 110 },  // 100 + 10
+            { name: '500 ml', price: 200 },  // 190 + 10
         ],
         isVeg: true,
         rating: 4.7,
         reviewCount: 8
-    }
+    },
 ];
