@@ -1914,12 +1914,6 @@
 
 
 
-
-
-
-
-
-
 import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
 import rajmaImg from '../assets/dishes/rajma.png';
 import dalTadkaImg from '../assets/dishes/dal_tadka.png';
@@ -1966,6 +1960,7 @@ import custardSevaiImg from '../assets/dishes/custard_sevai.png';
 import curdRiceImg from '../assets/dishes/curd_rice.png';
 import muttonMasalaImg from '../assets/dishes/mutton_masala.png';
 import muttonBhunaImg from '../assets/dishes/mutton_bhuna.png';
+import shahiPaneerImg from '../assets/dishes/Shahee paneer image.png';
 
 // ─── CATEGORIES ───────────────────────────────────────────────────────────────
 export const CATEGORIES = [
@@ -1989,8 +1984,8 @@ export const MENU_ITEMS = [
         description: 'Cottage cheese cooked in a spicy tomato-based gravy with bell peppers.',
         image: kadaiPaneerImg,
         variants: [
-            { name: 'Half (500 ml)', price: 240 },
-            { name: 'Full (750 ml)', price: 460 },
+            { name: 'Half', price: 240 },
+            { name: 'Full', price: 460 },
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -2004,13 +1999,28 @@ export const MENU_ITEMS = [
         description: 'Scrambled cottage cheese tossed with onions, tomatoes, and spices.',
         image: paneerBhurjiImg,
         variants: [
-            { name: 'Half (500 ml)', price: 240 },
-            { name: 'Full (750 ml)', price: 460 },
+            { name: 'Half', price: 240 },
+            { name: 'Full', price: 460 },
         ],
         isVeg: true,
         hasSpicyOption: true,
         rating: 4.7,
         reviewCount: 14
+    },
+    {
+        id: 'shahi-paneer',
+        name: 'Shahi Paneer',
+        category: 'Main Course (Veg)',
+        description: 'Rich and creamy cottage cheese curry made with cashews, cream, and aromatic royal spices.',
+        image: shahiPaneerImg,
+        variants: [
+            { name: 'Half', price: 250 },
+            { name: 'Full', price: 480 },
+        ],
+        isVeg: true,
+        hasSpicyOption: true,
+        rating: 4.8,
+        reviewCount: 0
     },
     {
         id: 'chilli-paneer-dry',
@@ -2049,8 +2059,8 @@ export const MENU_ITEMS = [
         description: 'Classic North Indian kidney beans curry, best enjoyed with rice.',
         image: rajmaImg,
         variants: [
-            { name: 'Half (500 ml)', price: 140 },
-            { name: 'Full (750 ml)', price: 260 },
+            { name: 'Half', price: 140 },
+            { name: 'Full', price: 260 },
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -2064,8 +2074,8 @@ export const MENU_ITEMS = [
         description: 'Yellow lentils tempered with ghee, cumin, garlic, and red chilies.',
         image: dalTadkaImg,
         variants: [
-            { name: 'Half (500 ml)', price: 140 },
-            { name: 'Full (750 ml)', price: 260 },
+            { name: 'Half', price: 140 },
+            { name: 'Full', price: 260 },
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -2079,8 +2089,8 @@ export const MENU_ITEMS = [
         description: 'Spicy chickpeas cooked in a flavorful masala gravy.',
         image: choleImg,
         variants: [
-            { name: 'Half (500 ml)', price: 140 },
-            { name: 'Full (750 ml)', price: 260 },
+            { name: 'Half', price: 140 },
+            { name: 'Full', price: 260 },
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -2094,8 +2104,8 @@ export const MENU_ITEMS = [
         description: 'Yogurt-based curry with fried gram flour dumplings.',
         image: kadhiPakodaImg,
         variants: [
-            { name: 'Half (500 ml)', price: 140 },
-            { name: 'Full (750 ml)', price: 260 },
+            { name: 'Half', price: 140 },
+            { name: 'Full', price: 260 },
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -2124,7 +2134,7 @@ export const MENU_ITEMS = [
         image: butterChickenImg, // TODO: replace with chickenKormaImg when available
         variants: [
             { name: 'Half (6 pcs)', price: 380 },
-            { name: 'Full (9 pcs)', price: 740 },
+            { name: 'Full (12 pcs)', price: 740 },
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -2139,7 +2149,7 @@ export const MENU_ITEMS = [
         image: chickenCurryImg,
         variants: [
             { name: 'Half (6 pcs)', price: 360 },
-            { name: 'Full (9 pcs)', price: 700 },
+            { name: 'Full (12 pcs)', price: 700 },
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -2154,7 +2164,7 @@ export const MENU_ITEMS = [
         image: butterChickenImg,
         variants: [
             { name: 'Half (6 pcs)', price: 360 },
-            { name: 'Full (9 pcs)', price: 700 },
+            { name: 'Full (12 pcs)', price: 700 },
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -2169,7 +2179,7 @@ export const MENU_ITEMS = [
         image: muttonMasalaImg,
         variants: [
             { name: 'Half (6 pcs)', price: 380 },
-            { name: 'Full (9 pcs)', price: 740 },
+            { name: 'Full (12 pcs)', price: 740 },
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -2184,7 +2194,7 @@ export const MENU_ITEMS = [
         image: muttonBhunaImg,
         variants: [
             { name: 'Half (6 pcs)', price: 380 },
-            { name: 'Full (9 pcs)', price: 740 },
+            { name: 'Full (12 pcs)', price: 740 },
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -2243,8 +2253,8 @@ export const MENU_ITEMS = [
         description: 'Scrambled eggs spiced with onions, chilies, and coriander.',
         image: eggBhurjiImg,
         variants: [
-            { name: 'Half (500 ml)', price: 160 },
-            { name: 'Full (750 ml)', price: 230 },
+            { name: 'Half', price: 160 },
+            { name: 'Full', price: 230 },
         ],
         isVeg: false,
         hasSpicyOption: true,
@@ -2337,9 +2347,9 @@ export const MENU_ITEMS = [
         description: 'Comforting one-pot meal of rice and lentils cooked with mild spices.',
         image: yellowKhichdiImg,
         variants: [
-            { name: 'Half (500 ml)', price: 130 },
-            { name: 'Full (750 ml)', price: 160 },
-            { name: '1 Litre',       price: 220 },
+            { name: 'Half', price: 130 },
+            { name: 'Full', price: 160 },
+            { name: '1 Litre', price: 220 },
         ],
         isVeg: true,
         hasSpicyOption: true,
@@ -2395,9 +2405,9 @@ export const MENU_ITEMS = [
         description: 'Cooling yogurt rice tempered with mustard seeds, curry leaves, and spices.',
         image: curdRiceImg,
         variants: [
-            { name: 'Half (500 ml)', price: 145 },
-            { name: 'Full (750 ml)', price: 205 },
-            { name: '1 Litre',       price: 250 },
+            { name: 'Half', price: 145 },
+            { name: 'Full', price: 205 },
+            { name: '1 Litre', price: 250 },
         ],
         isVeg: true,
         rating: 4.5,
