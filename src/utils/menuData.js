@@ -287,7 +287,6 @@
 //         reviewCount: 7
 //     },
 
-
 //     {
 //         id: 'chilli-chicken-dry',
 //         name: 'Chilli Chicken (Dry)',
@@ -675,27 +674,6 @@
 //     }
 
 // ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
 // import rajmaImg from '../assets/dishes/rajma.png';
@@ -1263,20 +1241,6 @@
 //         reviewCount: 8
 //     }
 // ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
 // import rajmaImg from '../assets/dishes/rajma.png';
@@ -1906,14 +1870,6 @@
 //     },
 // ];
 
-
-
-
-
-
-
-
-
 // import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
 // import rajmaImg from '../assets/dishes/rajma.png';
 // import dalTadkaImg from '../assets/dishes/dal_tadka.png';
@@ -2528,23 +2484,6 @@
 //         reviewCount: 8
 //     },
 // ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
 // import rajmaImg from '../assets/dishes/rajma.png';
@@ -3292,799 +3231,818 @@
 //     },
 // ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import kadaiPaneerImg from '../assets/dishes/kadai_paneer.png';
-import rajmaImg from '../assets/dishes/rajma.png';
-import dalTadkaImg from '../assets/dishes/dal_tadka.png';
-import butterChickenImg from '../assets/dishes/butter_chicken.png';
-import choleImg from '../assets/dishes/chole_v2.jpg';
-import kadhiPakodaImg from '../assets/dishes/kadhi_pakoda.png';
-import paneerBhurjiImg from '../assets/dishes/paneer_bhurji.png';
-import chickenCurryImg from '../assets/dishes/chicken_curry.png';
-import eggCurryImg from '../assets/dishes/egg_curry.png';
-import eggBhurjiImg from '../assets/dishes/egg_bhurji.png';
-import vegManchowImg from '../assets/dishes/veg_manchow.png';
-import chickenManchowImg from '../assets/dishes/chicken_manchow.png';
-import boondiRaitaImg from '../assets/dishes/boondi_raita.png';
-import vegChowmeinImg from '../assets/dishes/veg_chowmein.png';
-import vegMacaroniImg from '../assets/dishes/veg_macaroni.jpg';
-import plainRiceImg from '../assets/dishes/plain_rice.png';
-import jeeraRiceImg from '../assets/dishes/jeera_rice.png';
-import coldCoffeeImg from '../assets/dishes/cold_coffee_new.png';
-import amritsariLassiImg from '../assets/dishes/amritsari_lassi.png';
-import gulabJamunDryImg from '../assets/dishes/gulab_jamun_new.jpg';
-import tawaRotiImg from '../assets/dishes/tawa_roti.png';
-import plainParathaImg from '../assets/dishes/plain_paratha.png';
-import puriImg from '../assets/dishes/puri.jpg';
-import pyazParathaImg from '../assets/dishes/pyaz_paratha.jpg';
-import alooPyazParathaImg from '../assets/dishes/aloo_pyaz_paratha.jpg';
-import cholePuriImg from '../assets/dishes/chole_puri.jpg';
-import vegFriedRiceImg from '../assets/dishes/veg_fried_rice.jpg';
-import eggFriedRiceImg from '../assets/dishes/egg_fried_rice.jpg';
-import chilliPaneerDryImg from '../assets/dishes/chilli_paneer_dry.jpg';
-import chilliPaneerGravyImg from '../assets/dishes/chilli_paneer_gravy.jpg';
-import chilliChickenDryImg from '../assets/dishes/chilli_chicken_dry.png';
-import chilliChickenGravyImg from '../assets/dishes/chilli_chicken_gravy_v2.jpg';
-import rajmaChawalImg from '../assets/dishes/rajma_chawal.png';
-import kadhiChawalImg from '../assets/dishes/kadhi_chawal.jpg';
-import dalChawalImg from '../assets/dishes/dal_chawal.jpg';
-import custardSevaiImg from '../assets/dishes/custard_sevai.png';
-import muttonMasalaImg from '../assets/dishes/mutton_masala.png';
-import muttonBhunaImg from '../assets/dishes/mutton_bhuna.png';
-import shahiPaneerImg from '../assets/dishes/Shahee paneer image.png';
+import kadaiPaneerImg from "../assets/dishes/kadai_paneer.png";
+// import rajmaImg from "../assets/dishes/rajma.png";
+import dalTadkaImg from "../assets/dishes/dal_tadka.png";
+import butterChickenImg from "../assets/dishes/butter.png";
+// import choleImg from "../assets/dishes/chole_v2.jpg";
+// import kadhiPakodaImg from "../assets/dishes/kadhi_pakoda.png";
+// import paneerBhurjiImg from "../assets/dishes/paneer_bhurji.png";
+// import chickenCurryImg from "../assets/dishes/chicken_curry.png";
+import eggCurryImg from "../assets/dishes/egg_curry.png";
+import eggBhurjiImg from "../assets/dishes/egg_bhurji.png";
+// import vegManchowImg from "../assets/dishes/veg_manchow.png";
+import chickenManchowImg from "../assets/dishes/chicken_manchow.png";
+import boondiRaitaImg from "../assets/dishes/boondi_raita.png";
+import vegChowmeinImg from "../assets/dishes/veg_chowmein.png";
+import vegMacaroniImg from "../assets/dishes/veg_macaroni.jpg";
+import plainRiceImg from "../assets/dishes/plain_rice.png";
+import jeeraRiceImg from "../assets/dishes/jeera_rice.png";
+import coldCoffeeImg from "../assets/dishes/cold_coffee_new.png";
+import amritsariLassiImg from "../assets/dishes/amritsari_lassi.png";
+import gulabJamunDryImg from "../assets/dishes/gulab_jamun_new.jpg";
+import tawaRotiImg from "../assets/dishes/tawa_roti.png";
+import plainParathaImg from "../assets/dishes/plain_paratha.png";
+import puriImg from "../assets/dishes/puri.jpg";
+// import pyazParathaImg from "../assets/dishes/pyaz_paratha.jpg";
+import alooPyazParathaImg from "../assets/dishes/aloo_pyaz_paratha.jpg";
+import cholePuriImg from "../assets/dishes/chole_puri.jpg";
+// import vegFriedRiceImg from "../assets/dishes/veg_fried_rice.jpg";
+import eggFriedRiceImg from "../assets/dishes/egg_fried_rice.jpg";
+import chilliPaneerDryImg from "../assets/dishes/chilli_paneer_dry.jpg";
+import chilliPaneerGravyImg from "../assets/dishes/chilli_paneer_gravy.jpg";
+import chilliChickenDryImg from "../assets/dishes/chilli_chicken_dry.png";
+import chilliChickenGravyImg from "../assets/dishes/chilli_chicken_gravy_v2.jpg";
+// import rajmaChawalImg from "../assets/dishes/rajma_chawal.png";
+// import kadhiChawalImg from "../assets/dishes/kadhi_chawal.jpg";
+// import dalChawalImg from "../assets/dishes/dal_chawal.jpg";
+import custardSevaiImg from "../assets/dishes/custard_sevai.png";
+import muttonMasalaImg from "../assets/dishes/mutton_masala.png";
+import muttonBhunaImg from "../assets/dishes/mutton_bhuna.png";
+import shahiPaneerImg from "../assets/dishes/Shahee paneer image.png";
+import alooParathaImg from "../assets/dishes/aalu-paratha.png";
+import curryChickenImg from "../assets/dishes/curry_chicken.png";
+import dalMakhaniImg from "../assets/dishes/dal-Makhni.png";
+import kadhaiChickenImg from "../assets/dishes/kadhai_chikan.png";
+import masalaMaggiImg from "../assets/dishes/masalamagii.png";
+import muttarPaneerImg from "../assets/dishes/mutter-paneer.png";
+import chilliLollipopImg from "../assets/dishes/chilliLollipopImg.png";
+import vegMaggiImg from "../assets/dishes/veg-maggi.png";
+import rasgullaImg from "../assets/dishes/rasgulla.png";
+import mangoShakeImg from "../assets/dishes/mango-shek.png";
+import chocolateShakeImg from "../assets/dishes/Chocolate.png";
+import saladImag from "../assets/dishes/Green-Salad.png";
+import MasalaCurdImg from "../assets/dishes/Masala-Curd.png";
+import seekhKababImg from "../assets/dishes/Mutton-Seekh-Kabab1.png";
+import patiyalaChickenImg from "../assets/dishes/Patiyala-Chicken.png";
+import bananaShakeImg from "../assets/dishes/bananashek.png";
+import fishCurryImg from "../assets/dishes/fishcurry.png";
+import ChickenKormaImg from "../assets/dishes/chickenkorma.png";
+import bhunaChickenImg from "../assets/dishes/bhunaChickenImg.png";
+import SeekhImg from "../assets/dishes/Chicken-Seekh.png";
 
 // TODO: add proper images for the items below and replace these placeholders
-const muttarPaneerImg    = kadaiPaneerImg;       // placeholder
-const dalMakhaniImg      = dalTadkaImg;           // placeholder
-const jeeraAlooImg       = plainRiceImg;          // placeholder
-const bhunaChickenImg    = chickenCurryImg;       // placeholder
-const kadhaiChickenImg   = chickenCurryImg;       // placeholder
-const patiyalaChickenImg = butterChickenImg;      // placeholder
-const fishCurryImg       = chickenCurryImg;       // placeholder
-const chilliLollipopImg  = chilliChickenDryImg;   // placeholder
-const seekhKababImg      = muttonMasalaImg;       // placeholder
-const bananaShakeImg     = coldCoffeeImg;         // placeholder
-const chocolateShakeImg  = coldCoffeeImg;         // placeholder
-const mangoShakeImg      = coldCoffeeImg;         // placeholder
-const lassiImg           = amritsariLassiImg;     // placeholder
-const rasgullaImg        = gulabJamunDryImg;      // placeholder
-const masalaMaggiImg     = vegChowmeinImg;        // placeholder
-const vegMaggiImg        = vegChowmeinImg;        // placeholder
-const breadOmeletteImg   = eggBhurjiImg;          // placeholder
-const alooParathaImg     = alooPyazParathaImg;    // placeholder
-const sattuParathaImg    = plainParathaImg;       // placeholder
-const chickenChowmeinImg = chickenManchowImg;     // placeholder
+// const muttarPaneerImg = kadaiPaneerImg; // placeholder
+// const dalMakhaniImg = dalTadkaImg; // placeholder
+const jeeraAlooImg = plainRiceImg; // placeholder
+// const bhunaChickenImg = chickenCurryImg; // placeholder
+// const kadhaiChickenImg = chickenCurryImg; // placeholder
+// const patiyalaChickenImg = butterChickenImg; // placeholder
+// const fishCurryImg = chickenCurryImg; // placeholder
+// const chilliLollipopImg = chilliChickenDryImg; // placeholder
+// const seekhKababImg = muttonMasalaImg; // placeholder
+// const bananaShakeImg = coldCoffeeImg; // placeholder
+// const chocolateShakeImg = coldCoffeeImg; // placeholder
+// const mangoShakeImg = coldCoffeeImg; // placeholder
+const lassiImg = amritsariLassiImg; // placeholder
+// const rasgullaImg = gulabJamunDryImg; // placeholder
+// const masalaMaggiImg = vegChowmeinImg; // placeholder
+// const vegMaggiImg = vegChowmeinImg; // placeholder
+const breadOmeletteImg = eggBhurjiImg; // placeholder
+// const alooParathaImg = alooPyazParathaImg; // placeholder
+const sattuParathaImg = plainParathaImg; // placeholder
+const chickenChowmeinImg = chickenManchowImg; // placeholder
 
 // ─── CATEGORIES ───────────────────────────────────────────────────────────────
 export const CATEGORIES = [
-    "Delhi Breakfast Specials",
-    "Main Course (Veg)",
-    "Main Course (Non-Veg)",
-    "Snacks",
-    "Rice & Noodles",
-    "Breads",
-    "Soups & Sides",
-    "Drinks",
-    "Sweets",
+  "Delhi Breakfast Specials",
+  "Main Course (Veg)",
+  "Main Course (Non-Veg)",
+  "Snacks",
+  "Rice & Noodles",
+  "Breads",
+  "Soups & Sides",
+  "Drinks",
+  "Sweets",
 ];
 
 export const MENU_ITEMS = [
+  // ── Delhi Breakfast Specials ───────────────────────────────────────────────
 
-    // ── Delhi Breakfast Specials ───────────────────────────────────────────────
+  {
+    id: "chole-bhature",
+    name: "Choley Bhature",
+    category: "Delhi Breakfast Specials",
+    description:
+      "Amritsari chole slow-cooked overnight with fluffy golden bhature. (2 Bhature)",
+    image: cholePuriImg,
+    price: 80,
+    isVeg: true,
+    hasSpicyOption: true,
+    rating: 4.8,
+    reviewCount: 0,
+  },
+  {
+    id: "aloo-poori",
+    name: "Aloo Poori",
+    category: "Delhi Breakfast Specials",
+    description:
+      "Delhi's favourite Sunday breakfast with spicy potato curry. (6 Poori)",
+    image: puriImg,
+    price: 80,
+    isVeg: true,
+    hasSpicyOption: true,
+    rating: 4.7,
+    reviewCount: 0,
+  },
+  {
+    id: "masala-maggi",
+    name: "Masala Maggi",
+    category: "Delhi Breakfast Specials",
+    description:
+      "Classic Maggi tossed with butter, onions, tomatoes & signature Delhi masala.",
+    image: masalaMaggiImg,
+    price: 60,
+    isVeg: true,
+    rating: 4.4,
+    reviewCount: 0,
+  },
+  {
+    id: "veg-maggi",
+    name: "Veg Maggi",
+    category: "Delhi Breakfast Specials",
+    description: "Loaded with fresh vegetables and aromatic herbs.",
+    image: vegMaggiImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.3,
+    reviewCount: 0,
+  },
+  {
+    id: "veg-chowmein-breakfast",
+    name: "Veg Chowmein",
+    category: "Delhi Breakfast Specials",
+    description:
+      "Street-style noodles inspired by Delhi's famous Chinese corners.",
+    image: vegChowmeinImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.4,
+    reviewCount: 0,
+  },
+  {
+    id: "veg-macaroni-breakfast",
+    name: "Veg Macaroni",
+    category: "Delhi Breakfast Specials",
+    description: "Creamy Indian-style macaroni with fresh vegetables & herbs.",
+    image: vegMacaroniImg,
+    price: 90,
+    isVeg: true,
+    rating: 3.9,
+    reviewCount: 0,
+  },
+  {
+    id: "bread-omelette",
+    name: "Bread Omelette",
+    category: "Delhi Breakfast Specials",
+    description:
+      "Made with fresh farm eggs, onions, coriander & green chillies. (2 Eggs + 2 Bread)",
+    image: breadOmeletteImg,
+    price: 80,
+    isVeg: false,
+    rating: 4.5,
+    reviewCount: 0,
+  },
+  {
+    id: "aloo-paratha",
+    name: "Aloo Paratha with Curd",
+    category: "Delhi Breakfast Specials",
+    description:
+      "Stuffed with seasoned potatoes and served with fresh curd. (2 pieces)",
+    image: alooParathaImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.6,
+    reviewCount: 0,
+  },
+  {
+    id: "aloo-pyaz-paratha",
+    name: "Aloo Pyaz Paratha with Curd",
+    category: "Delhi Breakfast Specials",
+    description:
+      "A Punjabi favourite with potatoes, onions & homemade spices. (2 pieces)",
+    image: alooPyazParathaImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.6,
+    reviewCount: 0,
+  },
+  {
+    id: "sattu-paratha",
+    name: "Sattu Paratha with Curd",
+    category: "Delhi Breakfast Specials",
+    description:
+      "The perfect blend of Bihar's famous sattu and Delhi's love for parathas. (2 pieces)",
+    image: sattuParathaImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.5,
+    reviewCount: 0,
+  },
+  {
+    id: "chicken-chowmein",
+    name: "Chicken Chowmein",
+    category: "Delhi Breakfast Specials",
+    description:
+      "Juicy chicken stir-fried with noodles, vegetables & Indo-Chinese sauces.",
+    image: chickenChowmeinImg,
+    price: 120,
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.6,
+    reviewCount: 0,
+  },
 
-    {
-        id: 'chole-bhature',
-        name: 'Choley Bhature',
-        category: 'Delhi Breakfast Specials',
-        description: 'Amritsari chole slow-cooked overnight with fluffy golden bhature. (2 Bhature)',
-        image: cholePuriImg,
-        price: 80,
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.8,
-        reviewCount: 0,
-    },
-    {
-        id: 'aloo-poori',
-        name: 'Aloo Poori',
-        category: 'Delhi Breakfast Specials',
-        description: "Delhi's favourite Sunday breakfast with spicy potato curry. (6 Poori)",
-        image: puriImg,
-        price: 80,
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.7,
-        reviewCount: 0,
-    },
-    {
-        id: 'masala-maggi',
-        name: 'Masala Maggi',
-        category: 'Delhi Breakfast Specials',
-        description: 'Classic Maggi tossed with butter, onions, tomatoes & signature Delhi masala.',
-        image: masalaMaggiImg,
-        price: 60,
-        isVeg: true,
-        rating: 4.4,
-        reviewCount: 0,
-    },
-    {
-        id: 'veg-maggi',
-        name: 'Veg Maggi',
-        category: 'Delhi Breakfast Specials',
-        description: 'Loaded with fresh vegetables and aromatic herbs.',
-        image: vegMaggiImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.3,
-        reviewCount: 0,
-    },
-    {
-        id: 'veg-chowmein-breakfast',
-        name: 'Veg Chowmein',
-        category: 'Delhi Breakfast Specials',
-        description: "Street-style noodles inspired by Delhi's famous Chinese corners.",
-        image: vegChowmeinImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.4,
-        reviewCount: 0,
-    },
-    {
-        id: 'veg-macaroni-breakfast',
-        name: 'Veg Macaroni',
-        category: 'Delhi Breakfast Specials',
-        description: 'Creamy Indian-style macaroni with fresh vegetables & herbs.',
-        image: vegMacaroniImg,
-        price: 90,
-        isVeg: true,
-        rating: 3.9,
-        reviewCount: 0,
-    },
-    {
-        id: 'bread-omelette',
-        name: 'Bread Omelette',
-        category: 'Delhi Breakfast Specials',
-        description: 'Made with fresh farm eggs, onions, coriander & green chillies. (2 Eggs + 2 Bread)',
-        image: breadOmeletteImg,
-        price: 80,
-        isVeg: false,
-        rating: 4.5,
-        reviewCount: 0,
-    },
-    {
-        id: 'aloo-paratha',
-        name: 'Aloo Paratha with Curd',
-        category: 'Delhi Breakfast Specials',
-        description: 'Stuffed with seasoned potatoes and served with fresh curd. (2 pieces)',
-        image: alooParathaImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.6,
-        reviewCount: 0,
-    },
-    {
-        id: 'aloo-pyaz-paratha',
-        name: 'Aloo Pyaz Paratha with Curd',
-        category: 'Delhi Breakfast Specials',
-        description: 'A Punjabi favourite with potatoes, onions & homemade spices. (2 pieces)',
-        image: alooPyazParathaImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.6,
-        reviewCount: 0,
-    },
-    {
-        id: 'sattu-paratha',
-        name: 'Sattu Paratha with Curd',
-        category: 'Delhi Breakfast Specials',
-        description: "The perfect blend of Bihar's famous sattu and Delhi's love for parathas. (2 pieces)",
-        image: sattuParathaImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.5,
-        reviewCount: 0,
-    },
-    {
-        id: 'chicken-chowmein',
-        name: 'Chicken Chowmein',
-        category: 'Delhi Breakfast Specials',
-        description: 'Juicy chicken stir-fried with noodles, vegetables & Indo-Chinese sauces.',
-        image: chickenChowmeinImg,
-        price: 120,
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.6,
-        reviewCount: 0,
-    },
+  // ── Main Course (Veg) ─────────────────────────────────────────────────────
 
-    // ── Main Course (Veg) ─────────────────────────────────────────────────────
+  {
+    id: "shahi-paneer",
+    name: "Shahi Paneer",
+    category: "Main Course (Veg)",
+    description:
+      "Soft paneer cubes simmered in rich tomato, butter & cashew gravy.",
+    image: shahiPaneerImg,
+    variants: [
+      { name: "Quarter (4 pcs)", price: 170 },
+      { name: "Half (8 pcs)", price: 330 },
+      { name: "Full (16 pcs)", price: 640 },
+    ],
+    isVeg: true,
+    hasSpicyOption: true,
+    rating: 4.8,
+    reviewCount: 0,
+  },
+  {
+    id: "mutter-paneer",
+    name: "Mutter Paneer",
+    category: "Main Course (Veg)",
+    description:
+      "Fresh paneer & green peas cooked in traditional North Indian gravy.",
+    image: muttarPaneerImg,
+    variants: [
+      { name: "Quarter", price: 160 },
+      { name: "Half", price: 310 },
+      { name: "Full", price: 620 },
+    ],
+    isVeg: true,
+    hasSpicyOption: true,
+    rating: 4.6,
+    reviewCount: 0,
+  },
+  {
+    id: "kadai-paneer",
+    name: "Kadai Paneer",
+    category: "Main Course (Veg)",
+    description:
+      "Paneer tossed with onions, capsicum & freshly crushed spices.",
+    image: kadaiPaneerImg,
+    variants: [
+      { name: "Quarter", price: 170 },
+      { name: "Half", price: 330 },
+      { name: "Full", price: 640 },
+    ],
+    isVeg: true,
+    hasSpicyOption: true,
+    rating: 4.8,
+    reviewCount: 18,
+  },
+  {
+    id: "jeera-aloo",
+    name: "Jeera Aloo",
+    category: "Main Course (Veg)",
+    description: "Golden potatoes sautéed in butter, cumin & herbs.",
+    image: jeeraAlooImg,
+    variants: [
+      { name: "Half", price: 120 },
+      { name: "Full", price: 230 },
+    ],
+    isVeg: true,
+    rating: 4.3,
+    reviewCount: 0,
+  },
+  {
+    id: "dal-makhani",
+    name: "Dal Makhani",
+    category: "Main Course (Veg)",
+    description:
+      "Slow-cooked black lentils finished with butter & fresh cream.",
+    image: dalMakhaniImg,
+    variants: [
+      { name: "Half", price: 110 },
+      { name: "Full", price: 210 },
+    ],
+    isVeg: true,
+    rating: 4.5,
+    reviewCount: 0,
+  },
+  {
+    id: "dal-tadka",
+    name: "Arhar Dal Tadka",
+    category: "Main Course (Veg)",
+    description: "Yellow lentils tempered with garlic, cumin & desi ghee.",
+    image: dalTadkaImg,
+    variants: [
+      { name: "Half", price: 90 },
+      { name: "Full", price: 170 },
+    ],
+    isVeg: true,
+    hasSpicyOption: true,
+    rating: 4.2,
+    reviewCount: 8,
+  },
 
-    {
-        id: 'shahi-paneer',
-        name: 'Shahi Paneer',
-        category: 'Main Course (Veg)',
-        description: 'Soft paneer cubes simmered in rich tomato, butter & cashew gravy.',
-        image: shahiPaneerImg,
-        variants: [
-            { name: 'Quarter (4 pcs)', price: 170 },
-            { name: 'Half (8 pcs)',    price: 330 },
-            { name: 'Full (16 pcs)',   price: 640 },
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.8,
-        reviewCount: 0,
-    },
-    {
-        id: 'mutter-paneer',
-        name: 'Mutter Paneer',
-        category: 'Main Course (Veg)',
-        description: 'Fresh paneer & green peas cooked in traditional North Indian gravy.',
-        image: muttarPaneerImg,
-        variants: [
-            { name: 'Quarter', price: 160 },
-            { name: 'Half',    price: 310 },
-            { name: 'Full',    price: 620 },
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.6,
-        reviewCount: 0,
-    },
-    {
-        id: 'kadai-paneer',
-        name: 'Kadai Paneer',
-        category: 'Main Course (Veg)',
-        description: 'Paneer tossed with onions, capsicum & freshly crushed spices.',
-        image: kadaiPaneerImg,
-        variants: [
-            { name: 'Quarter', price: 170 },
-            { name: 'Half',    price: 330 },
-            { name: 'Full',    price: 640 },
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.8,
-        reviewCount: 18,
-    },
-    {
-        id: 'jeera-aloo',
-        name: 'Jeera Aloo',
-        category: 'Main Course (Veg)',
-        description: 'Golden potatoes sautéed in butter, cumin & herbs.',
-        image: jeeraAlooImg,
-        variants: [
-            { name: 'Half', price: 120 },
-            { name: 'Full', price: 230 },
-        ],
-        isVeg: true,
-        rating: 4.3,
-        reviewCount: 0,
-    },
-    {
-        id: 'dal-makhani',
-        name: 'Dal Makhani',
-        category: 'Main Course (Veg)',
-        description: 'Slow-cooked black lentils finished with butter & fresh cream.',
-        image: dalMakhaniImg,
-        variants: [
-            { name: 'Half', price: 110 },
-            { name: 'Full', price: 210 },
-        ],
-        isVeg: true,
-        rating: 4.5,
-        reviewCount: 0,
-    },
-    {
-        id: 'dal-tadka',
-        name: 'Arhar Dal Tadka',
-        category: 'Main Course (Veg)',
-        description: 'Yellow lentils tempered with garlic, cumin & desi ghee.',
-        image: dalTadkaImg,
-        variants: [
-            { name: 'Half', price: 90  },
-            { name: 'Full', price: 170 },
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.2,
-        reviewCount: 8,
-    },
+  // ── Main Course (Non-Veg) ─────────────────────────────────────────────────
 
-    // ── Main Course (Non-Veg) ─────────────────────────────────────────────────
+  {
+    id: "chicken-curry",
+    name: "Chicken Curry",
+    category: "Main Course (Non-Veg)",
+    description: "Fresh chicken cooked in a traditional onion & tomato gravy.",
+    image: curryChickenImg,
+    variants: [
+      { name: "Quarter", price: 160 },
+      { name: "Half", price: 310 },
+      { name: "Full", price: 620 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.9,
+    reviewCount: 19,
+  },
+  {
+    id: "butter-chicken",
+    name: "Butter Chicken",
+    category: "Main Course (Non-Veg)",
+    description:
+      "Delhi's world-famous buttery tomato gravy with juicy chicken.",
+    image: butterChickenImg,
+    variants: [
+      { name: "Quarter", price: 180 },
+      { name: "Half", price: 350 },
+      { name: "Full", price: 700 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 5.0,
+    reviewCount: 20,
+  },
+  {
+    id: "chicken-korma",
+    name: "Chicken Korma",
+    category: "Main Course (Non-Veg)",
+    description:
+      "Royal Mughlai curry enriched with cashew, cream & aromatic spices.",
+    image: ChickenKormaImg,
+    variants: [
+      { name: "Quarter", price: 180 },
+      { name: "Half", price: 350 },
+      { name: "Full", price: 700 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.8,
+    reviewCount: 0,
+  },
+  {
+    id: "bhuna-chicken",
+    name: "Bhuna Chicken",
+    category: "Main Course (Non-Veg)",
+    description: "Slow-roasted chicken coated in thick spicy masala.",
+    image: bhunaChickenImg,
+    variants: [
+      { name: "Quarter", price: 180 },
+      { name: "Half", price: 350 },
+      { name: "Full", price: 700 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.7,
+    reviewCount: 0,
+  },
+  {
+    id: "kadhai-chicken",
+    name: "Kadhai Chicken",
+    category: "Main Course (Non-Veg)",
+    description:
+      "Chicken tossed with onions, capsicum & freshly ground spices.",
+    image: kadhaiChickenImg,
+    variants: [
+      { name: "Quarter", price: 180 },
+      { name: "Half", price: 350 },
+      { name: "Full", price: 700 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.7,
+    reviewCount: 0,
+  },
+  {
+    id: "patiyala-chicken",
+    name: "Patiyala Chicken",
+    category: "Main Course (Non-Veg)",
+    description:
+      "Rich Punjabi-style chicken curry loaded with authentic flavours.",
+    image: patiyalaChickenImg,
+    variants: [
+      { name: "Quarter", price: 220 },
+      { name: "Half", price: 430 },
+      { name: "Full", price: 860 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.8,
+    reviewCount: 0,
+  },
+  {
+    id: "egg-curry",
+    name: "Egg Curry",
+    category: "Main Course (Non-Veg)",
+    description: "Farm-fresh eggs in spicy home-style curry.",
+    image: eggCurryImg,
+    variants: [
+      { name: "Half (2 Eggs)", price: 90 },
+      { name: "Full (4 Eggs)", price: 170 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.3,
+    reviewCount: 9,
+  },
+  {
+    id: "egg-bhurji",
+    name: "Egg Bhurji",
+    category: "Main Course (Non-Veg)",
+    description: "Fresh eggs scrambled with onions, tomatoes & green chillies.",
+    image: eggBhurjiImg,
+    variants: [
+      { name: "Half", price: 120 },
+      { name: "Full", price: 230 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.4,
+    reviewCount: 7,
+  },
+  {
+    id: "mutton-masala",
+    name: "Mutton Masala",
+    category: "Main Course (Non-Veg)",
+    description: "Tender mutton slow-cooked with aromatic Indian spices.",
+    image: muttonMasalaImg,
+    variants: [
+      { name: "Quarter", price: 220 },
+      { name: "Half", price: 430 },
+      { name: "Full", price: 860 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.8,
+    reviewCount: 0,
+  },
+  {
+    id: "bhuna-mutton",
+    name: "Bhuna Mutton",
+    category: "Main Course (Non-Veg)",
+    description: "Juicy mutton roasted with rich Punjabi-style masala.",
+    image: muttonBhunaImg,
+    variants: [
+      { name: "Quarter", price: 240 },
+      { name: "Half", price: 470 },
+      { name: "Full", price: 940 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.8,
+    reviewCount: 0,
+  },
+  {
+    id: "fish-curry",
+    name: "Fish Curry",
+    category: "Main Course (Non-Veg)",
+    description: "Fresh fish cooked in flavourful North Indian curry.",
+    image: fishCurryImg,
+    variants: [
+      { name: "Quarter", price: 160 },
+      { name: "Half", price: 310 },
+      { name: "Full", price: 620 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.5,
+    reviewCount: 0,
+  },
 
-    {
-        id: 'chicken-curry',
-        name: 'Chicken Curry',
-        category: 'Main Course (Non-Veg)',
-        description: 'Fresh chicken cooked in a traditional onion & tomato gravy.',
-        image: chickenCurryImg,
-        variants: [
-            { name: 'Quarter', price: 160 },
-            { name: 'Half',    price: 310 },
-            { name: 'Full',    price: 620 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.9,
-        reviewCount: 19,
-    },
-    {
-        id: 'butter-chicken',
-        name: 'Butter Chicken',
-        category: 'Main Course (Non-Veg)',
-        description: "Delhi's world-famous buttery tomato gravy with juicy chicken.",
-        image: butterChickenImg,
-        variants: [
-            { name: 'Quarter', price: 180 },
-            { name: 'Half',    price: 350 },
-            { name: 'Full',    price: 700 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 5.0,
-        reviewCount: 20,
-    },
-    {
-        id: 'chicken-korma',
-        name: 'Chicken Korma',
-        category: 'Main Course (Non-Veg)',
-        description: 'Royal Mughlai curry enriched with cashew, cream & aromatic spices.',
-        image: butterChickenImg,
-        variants: [
-            { name: 'Quarter', price: 180 },
-            { name: 'Half',    price: 350 },
-            { name: 'Full',    price: 700 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.8,
-        reviewCount: 0,
-    },
-    {
-        id: 'bhuna-chicken',
-        name: 'Bhuna Chicken',
-        category: 'Main Course (Non-Veg)',
-        description: 'Slow-roasted chicken coated in thick spicy masala.',
-        image: bhunaChickenImg,
-        variants: [
-            { name: 'Quarter', price: 180 },
-            { name: 'Half',    price: 350 },
-            { name: 'Full',    price: 700 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.7,
-        reviewCount: 0,
-    },
-    {
-        id: 'kadhai-chicken',
-        name: 'Kadhai Chicken',
-        category: 'Main Course (Non-Veg)',
-        description: 'Chicken tossed with onions, capsicum & freshly ground spices.',
-        image: kadhaiChickenImg,
-        variants: [
-            { name: 'Quarter', price: 180 },
-            { name: 'Half',    price: 350 },
-            { name: 'Full',    price: 700 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.7,
-        reviewCount: 0,
-    },
-    {
-        id: 'patiyala-chicken',
-        name: 'Patiyala Chicken',
-        category: 'Main Course (Non-Veg)',
-        description: 'Rich Punjabi-style chicken curry loaded with authentic flavours.',
-        image: patiyalaChickenImg,
-        variants: [
-            { name: 'Quarter', price: 220 },
-            { name: 'Half',    price: 430 },
-            { name: 'Full',    price: 860 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.8,
-        reviewCount: 0,
-    },
-    {
-        id: 'egg-curry',
-        name: 'Egg Curry',
-        category: 'Main Course (Non-Veg)',
-        description: 'Farm-fresh eggs in spicy home-style curry.',
-        image: eggCurryImg,
-        variants: [
-            { name: 'Half (2 Eggs)', price: 90  },
-            { name: 'Full (4 Eggs)', price: 170 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.3,
-        reviewCount: 9,
-    },
-    {
-        id: 'egg-bhurji',
-        name: 'Egg Bhurji',
-        category: 'Main Course (Non-Veg)',
-        description: 'Fresh eggs scrambled with onions, tomatoes & green chillies.',
-        image: eggBhurjiImg,
-        variants: [
-            { name: 'Half', price: 120 },
-            { name: 'Full', price: 230 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.4,
-        reviewCount: 7,
-    },
-    {
-        id: 'mutton-masala',
-        name: 'Mutton Masala',
-        category: 'Main Course (Non-Veg)',
-        description: 'Tender mutton slow-cooked with aromatic Indian spices.',
-        image: muttonMasalaImg,
-        variants: [
-            { name: 'Quarter', price: 220 },
-            { name: 'Half',    price: 430 },
-            { name: 'Full',    price: 860 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.8,
-        reviewCount: 0,
-    },
-    {
-        id: 'bhuna-mutton',
-        name: 'Bhuna Mutton',
-        category: 'Main Course (Non-Veg)',
-        description: 'Juicy mutton roasted with rich Punjabi-style masala.',
-        image: muttonBhunaImg,
-        variants: [
-            { name: 'Quarter', price: 240 },
-            { name: 'Half',    price: 470 },
-            { name: 'Full',    price: 940 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.8,
-        reviewCount: 0,
-    },
-    {
-        id: 'fish-curry',
-        name: 'Fish Curry',
-        category: 'Main Course (Non-Veg)',
-        description: 'Fresh fish cooked in flavourful North Indian curry.',
-        image: fishCurryImg,
-        variants: [
-            { name: 'Quarter', price: 160 },
-            { name: 'Half',    price: 310 },
-            { name: 'Full',    price: 620 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.5,
-        reviewCount: 0,
-    },
+  // ── Snacks ────────────────────────────────────────────────────────────────
 
-    // ── Snacks ────────────────────────────────────────────────────────────────
+  {
+    id: "chilli-chicken-dry",
+    name: "Chilli Chicken (Dry)",
+    category: "Snacks",
+    description: "Crispy chicken tossed in spicy garlic-soy sauce.",
+    image: chilliChickenDryImg,
+    variants: [
+      { name: "Half", price: 260 },
+      { name: "Full", price: 510 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.6,
+    reviewCount: 14,
+  },
+  {
+    id: "chilli-chicken-gravy",
+    name: "Chilli Chicken (Gravy)",
+    category: "Snacks",
+    description: "Juicy chicken in a rich, spicy Indo-Chinese gravy.",
+    image: chilliChickenGravyImg,
+    variants: [
+      { name: "Half", price: 260 },
+      { name: "Full", price: 510 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.6,
+    reviewCount: 14,
+  },
+  {
+    id: "chilli-lollipop",
+    name: "Chilli Lollipop",
+    category: "Snacks",
+    description:
+      "Juicy chicken lollipops coated in signature Indo-Chinese sauce.",
+    image: chilliLollipopImg,
+    variants: [
+      { name: "Half", price: 280 },
+      { name: "Full", price: 540 },
+    ],
+    isVeg: false,
+    hasSpicyOption: true,
+    rating: 4.7,
+    reviewCount: 0,
+  },
+  {
+    id: "chilli-paneer-dry",
+    name: "Chilli Paneer (Dry)",
+    category: "Snacks",
+    description: "Soft paneer with onions, capsicum & spicy sauces.",
+    image: chilliPaneerDryImg,
+    variants: [
+      { name: "Half", price: 250 },
+      { name: "Full", price: 480 },
+    ],
+    isVeg: true,
+    hasSpicyOption: true,
+    rating: 4.7,
+    reviewCount: 12,
+  },
+  {
+    id: "chilli-paneer-gravy",
+    name: "Chilli Paneer (Gravy)",
+    category: "Snacks",
+    description: "Soft paneer in a rich, spicy Indo-Chinese gravy.",
+    image: chilliPaneerGravyImg,
+    variants: [
+      { name: "Half", price: 250 },
+      { name: "Full", price: 480 },
+    ],
+    isVeg: true,
+    hasSpicyOption: true,
+    rating: 4.7,
+    reviewCount: 12,
+  },
+  {
+    id: "chicken-seekh-kabab",
+    name: "Chicken Seekh Kabab",
+    category: "Snacks",
+    description: "Minced chicken blended with herbs & charcoal-grilled.",
+    image: SeekhImg,
+    variants: [
+      { name: "Half", price: 160 },
+      { name: "Full", price: 310 },
+    ],
+    isVeg: false,
+    rating: 4.6,
+    reviewCount: 0,
+  },
+  {
+    id: "mutton-seekh-kabab",
+    name: "Mutton Seekh Kabab",
+    category: "Snacks",
+    description: "Juicy minced mutton with authentic Mughlai spices.",
+    image: seekhKababImg,
+    variants: [
+      { name: "Half", price: 180 },
+      { name: "Full", price: 350 },
+    ],
+    isVeg: false,
+    rating: 4.7,
+    reviewCount: 0,
+  },
 
-    {
-        id: 'chilli-chicken-dry',
-        name: 'Chilli Chicken (Dry)',
-        category: 'Snacks',
-        description: 'Crispy chicken tossed in spicy garlic-soy sauce.',
-        image: chilliChickenDryImg,
-        variants: [
-            { name: 'Half', price: 260 },
-            { name: 'Full', price: 510 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.6,
-        reviewCount: 14,
-    },
-    {
-        id: 'chilli-chicken-gravy',
-        name: 'Chilli Chicken (Gravy)',
-        category: 'Snacks',
-        description: 'Juicy chicken in a rich, spicy Indo-Chinese gravy.',
-        image: chilliChickenGravyImg,
-        variants: [
-            { name: 'Half', price: 260 },
-            { name: 'Full', price: 510 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.6,
-        reviewCount: 14,
-    },
-    {
-        id: 'chilli-lollipop',
-        name: 'Chilli Lollipop',
-        category: 'Snacks',
-        description: 'Juicy chicken lollipops coated in signature Indo-Chinese sauce.',
-        image: chilliLollipopImg,
-        variants: [
-            { name: 'Half', price: 280 },
-            { name: 'Full', price: 540 },
-        ],
-        isVeg: false,
-        hasSpicyOption: true,
-        rating: 4.7,
-        reviewCount: 0,
-    },
-    {
-        id: 'chilli-paneer-dry',
-        name: 'Chilli Paneer (Dry)',
-        category: 'Snacks',
-        description: 'Soft paneer with onions, capsicum & spicy sauces.',
-        image: chilliPaneerDryImg,
-        variants: [
-            { name: 'Half', price: 250 },
-            { name: 'Full', price: 480 },
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.7,
-        reviewCount: 12,
-    },
-    {
-        id: 'chilli-paneer-gravy',
-        name: 'Chilli Paneer (Gravy)',
-        category: 'Snacks',
-        description: 'Soft paneer in a rich, spicy Indo-Chinese gravy.',
-        image: chilliPaneerGravyImg,
-        variants: [
-            { name: 'Half', price: 250 },
-            { name: 'Full', price: 480 },
-        ],
-        isVeg: true,
-        hasSpicyOption: true,
-        rating: 4.7,
-        reviewCount: 12,
-    },
-    {
-        id: 'chicken-seekh-kabab',
-        name: 'Chicken Seekh Kabab',
-        category: 'Snacks',
-        description: 'Minced chicken blended with herbs & charcoal-grilled.',
-        image: seekhKababImg,
-        variants: [
-            { name: 'Half', price: 160 },
-            { name: 'Full', price: 310 },
-        ],
-        isVeg: false,
-        rating: 4.6,
-        reviewCount: 0,
-    },
-    {
-        id: 'mutton-seekh-kabab',
-        name: 'Mutton Seekh Kabab',
-        category: 'Snacks',
-        description: 'Juicy minced mutton with authentic Mughlai spices.',
-        image: seekhKababImg,
-        variants: [
-            { name: 'Half', price: 180 },
-            { name: 'Full', price: 350 },
-        ],
-        isVeg: false,
-        rating: 4.7,
-        reviewCount: 0,
-    },
+  // ── Rice & Noodles ────────────────────────────────────────────────────────
 
-    // ── Rice & Noodles ────────────────────────────────────────────────────────
+  {
+    id: "plain-rice",
+    name: "Plain Rice",
+    category: "Rice & Noodles",
+    description: "Steamed basmati rice, fluffy and perfect for curries.",
+    image: plainRiceImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.0,
+    reviewCount: 3,
+  },
+  {
+    id: "jeera-rice",
+    name: "Jeera Rice",
+    category: "Rice & Noodles",
+    description: "Basmati rice tempered with cumin seeds and ghee.",
+    image: jeeraRiceImg,
+    price: 90,
+    isVeg: true,
+    rating: 4.2,
+    reviewCount: 5,
+  },
+  {
+    id: "egg-fried-rice",
+    name: "Egg Fried Rice",
+    category: "Rice & Noodles",
+    description: "Stir-fried rice with fluffy eggs and vegetables.",
+    image: eggFriedRiceImg,
+    price: 120,
+    isVeg: false,
+    rating: 4.6,
+    reviewCount: 14,
+  },
 
-    {
-        id: 'plain-rice',
-        name: 'Plain Rice',
-        category: 'Rice & Noodles',
-        description: 'Steamed basmati rice, fluffy and perfect for curries.',
-        image: plainRiceImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.0,
-        reviewCount: 3,
-    },
-    {
-        id: 'jeera-rice',
-        name: 'Jeera Rice',
-        category: 'Rice & Noodles',
-        description: 'Basmati rice tempered with cumin seeds and ghee.',
-        image: jeeraRiceImg,
-        price: 90,
-        isVeg: true,
-        rating: 4.2,
-        reviewCount: 5,
-    },
-    {
-        id: 'egg-fried-rice',
-        name: 'Egg Fried Rice',
-        category: 'Rice & Noodles',
-        description: 'Stir-fried rice with fluffy eggs and vegetables.',
-        image: eggFriedRiceImg,
-        price: 120,
-        isVeg: false,
-        rating: 4.6,
-        reviewCount: 14,
-    },
+  // ── Breads ────────────────────────────────────────────────────────────────
 
-    // ── Breads ────────────────────────────────────────────────────────────────
+  {
+    id: "tawa-roti",
+    name: "Tawa Roti",
+    category: "Breads",
+    description: "Soft whole wheat flatbread cooked on a griddle.",
+    image: tawaRotiImg,
+    variants: [
+      { name: "Regular", price: 10 },
+      { name: "With Ghee", price: 15 },
+    ],
+    isVeg: true,
+    rating: 4.6,
+    reviewCount: 38,
+  },
+  {
+    id: "plain-paratha",
+    name: "Plain Paratha",
+    category: "Breads",
+    description: "Layered whole wheat flatbread, shallow fried.",
+    image: plainParathaImg,
+    price: 15,
+    isVeg: true,
+    rating: 4.3,
+    reviewCount: 9,
+  },
 
-    {
-        id: 'tawa-roti',
-        name: 'Tawa Roti',
-        category: 'Breads',
-        description: 'Soft whole wheat flatbread cooked on a griddle.',
-        image: tawaRotiImg,
-        variants: [
-            { name: 'Regular',   price: 10 },
-            { name: 'With Ghee', price: 15 },
-        ],
-        isVeg: true,
-        rating: 4.6,
-        reviewCount: 38,
-    },
-    {
-        id: 'plain-paratha',
-        name: 'Plain Paratha',
-        category: 'Breads',
-        description: 'Layered whole wheat flatbread, shallow fried.',
-        image: plainParathaImg,
-        price: 15,
-        isVeg: true,
-        rating: 4.3,
-        reviewCount: 9,
-    },
+  // ── Soups & Sides ─────────────────────────────────────────────────────────
 
-    // ── Soups & Sides ─────────────────────────────────────────────────────────
+  {
+    id: "boondi-raita",
+    name: "Boondi Raita",
+    category: "Soups & Sides",
+    description: "Refreshing yogurt mixed with crispy boondi and mild spices.",
+    image: boondiRaitaImg,
+    price: 60,
+    isVeg: true,
+    rating: 4.0,
+    reviewCount: 4,
+  },
+  {
+    id: "masala-curd",
+    name: "Masala Curd",
+    category: "Soups & Sides",
+    description: "Fresh curd seasoned with spices.",
+    image: MasalaCurdImg,
+    price: 60,
+    isVeg: true,
+    rating: 4.0,
+    reviewCount: 0,
+  },
+  {
+    id: "green-salad",
+    name: "Green Salad",
+    category: "Soups & Sides",
+    description: "Fresh seasonal vegetables served as a light side salad.",
+    image: saladImag,
+    price: 60,
+    isVeg: true,
+    rating: 4.0,
+    reviewCount: 0,
+  },
 
-    {
-        id: 'boondi-raita',
-        name: 'Boondi Raita',
-        category: 'Soups & Sides',
-        description: 'Refreshing yogurt mixed with crispy boondi and mild spices.',
-        image: boondiRaitaImg,
-        price: 60,
-        isVeg: true,
-        rating: 4.0,
-        reviewCount: 4,
-    },
-    {
-        id: 'masala-curd',
-        name: 'Masala Curd',
-        category: 'Soups & Sides',
-        description: 'Fresh curd seasoned with spices.',
-        image: boondiRaitaImg,
-        price: 60,
-        isVeg: true,
-        rating: 4.0,
-        reviewCount: 0,
-    },
-    {
-        id: 'green-salad',
-        name: 'Green Salad',
-        category: 'Soups & Sides',
-        description: 'Fresh seasonal vegetables served as a light side salad.',
-        image: boondiRaitaImg,
-        price: 60,
-        isVeg: true,
-        rating: 4.0,
-        reviewCount: 0,
-    },
+  // ── Drinks ────────────────────────────────────────────────────────────────
 
-    // ── Drinks ────────────────────────────────────────────────────────────────
+  {
+    id: "banana-shake",
+    name: "Banana Shake",
+    category: "Drinks",
+    description: "Freshly blended using premium milk, fruits & ice cream.",
+    image: bananaShakeImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.5,
+    reviewCount: 0,
+  },
+  {
+    id: "cold-coffee",
+    name: "Cold Coffee",
+    category: "Drinks",
+    description: "Chilled coffee blended with milk and ice cream.",
+    image: coldCoffeeImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.5,
+    reviewCount: 0,
+  },
+  {
+    id: "chocolate-shake",
+    name: "Chocolate Shake",
+    category: "Drinks",
+    description: "Rich chocolate shake blended with premium milk & ice cream.",
+    image: chocolateShakeImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.5,
+    reviewCount: 0,
+  },
+  {
+    id: "mango-shake",
+    name: "Mango Shake",
+    category: "Drinks",
+    description: "Fresh mango blended with chilled milk & ice cream.",
+    image: mangoShakeImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.5,
+    reviewCount: 0,
+  },
+  {
+    id: "sweet-lassi",
+    name: "Sweet Lassi",
+    category: "Drinks",
+    description: "Chilled yogurt drink sweetened to perfection.",
+    image: lassiImg,
+    price: 70,
+    isVeg: true,
+    rating: 4.4,
+    reviewCount: 0,
+  },
 
-    {
-        id: 'banana-shake',
-        name: 'Banana Shake',
-        category: 'Drinks',
-        description: 'Freshly blended using premium milk, fruits & ice cream.',
-        image: bananaShakeImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.5,
-        reviewCount: 0,
-    },
-    {
-        id: 'cold-coffee',
-        name: 'Cold Coffee',
-        category: 'Drinks',
-        description: 'Chilled coffee blended with milk and ice cream.',
-        image: coldCoffeeImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.5,
-        reviewCount: 0,
-    },
-    {
-        id: 'chocolate-shake',
-        name: 'Chocolate Shake',
-        category: 'Drinks',
-        description: 'Rich chocolate shake blended with premium milk & ice cream.',
-        image: chocolateShakeImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.5,
-        reviewCount: 0,
-    },
-    {
-        id: 'mango-shake',
-        name: 'Mango Shake',
-        category: 'Drinks',
-        description: 'Fresh mango blended with chilled milk & ice cream.',
-        image: mangoShakeImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.5,
-        reviewCount: 0,
-    },
-    {
-        id: 'sweet-lassi',
-        name: 'Sweet Lassi',
-        category: 'Drinks',
-        description: 'Chilled yogurt drink sweetened to perfection.',
-        image: lassiImg,
-        price: 70,
-        isVeg: true,
-        rating: 4.4,
-        reviewCount: 0,
-    },
+  // ── Sweets ────────────────────────────────────────────────────────────────
 
-    // ── Sweets ────────────────────────────────────────────────────────────────
-
-    {
-        id: 'custard-sevai',
-        name: 'Custard Sewai',
-        category: 'Sweets',
-        description: 'Creamy custard dessert with vermicelli, topped with nuts and saffron.',
-        image: custardSevaiImg,
-        price: 80,
-        isVeg: true,
-        rating: 4.7,
-        reviewCount: 8,
-    },
-    {
-        id: 'gulab-jamun',
-        name: 'Gulab Jamun',
-        category: 'Sweets',
-        description: 'Soft milk-solid dumplings soaked in rose-flavoured sugar syrup.',
-        image: gulabJamunDryImg,
-        price: 30,
-        isVeg: true,
-        rating: 4.6,
-        reviewCount: 0,
-    },
-    {
-        id: 'rasgulla',
-        name: 'Rasgulla',
-        category: 'Sweets',
-        description: 'Soft spongy cottage cheese balls soaked in light sugar syrup.',
-        image: rasgullaImg,
-        price: 30,
-        isVeg: true,
-        rating: 4.5,
-        reviewCount: 0,
-    },
+  {
+    id: "custard-sevai",
+    name: "Custard Sewai",
+    category: "Sweets",
+    description:
+      "Creamy custard dessert with vermicelli, topped with nuts and saffron.",
+    image: custardSevaiImg,
+    price: 80,
+    isVeg: true,
+    rating: 4.7,
+    reviewCount: 8,
+  },
+  {
+    id: "gulab-jamun",
+    name: "Gulab Jamun",
+    category: "Sweets",
+    description:
+      "Soft milk-solid dumplings soaked in rose-flavoured sugar syrup.",
+    image: gulabJamunDryImg,
+    price: 30,
+    isVeg: true,
+    rating: 4.6,
+    reviewCount: 0,
+  },
+  {
+    id: "rasgulla",
+    name: "Rasgulla",
+    category: "Sweets",
+    description:
+      "Soft spongy cottage cheese balls soaked in light sugar syrup.",
+    image: rasgullaImg,
+    price: 30,
+    isVeg: true,
+    rating: 4.5,
+    reviewCount: 0,
+  },
 ];
