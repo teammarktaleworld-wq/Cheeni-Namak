@@ -3290,11 +3290,16 @@ import fishCurryImg from "../assets/dishes/fishcurry.png";
 import ChickenKormaImg from "../assets/dishes/chickenkorma.png";
 import bhunaChickenImg from "../assets/dishes/bhunaChickenImg.png";
 import SeekhImg from "../assets/dishes/Chicken-Seekh.png";
+import jeeraAlooImg from "../assets/dishes/Jeera-aallo.png";
+import breadOmeletteImg from "../assets/dishes/bread.png";
+import sattuParathaImg from "../assets/dishes/sattuparatha.png";
+import lassiImg from "../assets/dishes/lassi.png";
+import chickenChowmeinImg from "../assets/dishes/chickennodels.png";
 
 // TODO: add proper images for the items below and replace these placeholders
 // const muttarPaneerImg = kadaiPaneerImg; // placeholder
 // const dalMakhaniImg = dalTadkaImg; // placeholder
-const jeeraAlooImg = plainRiceImg; // placeholder
+// const jeeraAlooImg = plainRiceImg; // placeholder
 // const bhunaChickenImg = chickenCurryImg; // placeholder
 // const kadhaiChickenImg = chickenCurryImg; // placeholder
 // const patiyalaChickenImg = butterChickenImg; // placeholder
@@ -3304,14 +3309,14 @@ const jeeraAlooImg = plainRiceImg; // placeholder
 // const bananaShakeImg = coldCoffeeImg; // placeholder
 // const chocolateShakeImg = coldCoffeeImg; // placeholder
 // const mangoShakeImg = coldCoffeeImg; // placeholder
-const lassiImg = amritsariLassiImg; // placeholder
+// const lassiImg = amritsariLassiImg; // placeholder
 // const rasgullaImg = gulabJamunDryImg; // placeholder
 // const masalaMaggiImg = vegChowmeinImg; // placeholder
 // const vegMaggiImg = vegChowmeinImg; // placeholder
-const breadOmeletteImg = eggBhurjiImg; // placeholder
+// const breadOmeletteImg = eggBhurjiImg; // placeholder
 // const alooParathaImg = alooPyazParathaImg; // placeholder
-const sattuParathaImg = plainParathaImg; // placeholder
-const chickenChowmeinImg = chickenManchowImg; // placeholder
+// const sattuParathaImg = plainParathaImg; // placeholder
+// const chickenChowmeinImg = chickenManchowImg; // placeholder
 
 // ─── CATEGORIES ───────────────────────────────────────────────────────────────
 export const CATEGORIES = [
