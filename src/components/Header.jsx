@@ -193,7 +193,7 @@ const Header = ({ cartCount, onCartClick }) => {
 
                     {/* Instagram Link */}
                     <a
-                        href="https://www.instagram.com/cheeninamakind/"
+                        href="https://www.instagram.com/womaniya.stall/"
                         target="_blank"
                         rel="noreferrer"
                         className="p-2 md:p-3 rounded-full hover:bg-gray-100 transition-all border border-transparent hover:border-gray-200 group"
