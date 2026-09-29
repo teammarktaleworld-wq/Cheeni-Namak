@@ -1,3 +1,5 @@
+// src\components\Animatedcategoryheading.jsx
+
 import React, { useRef, useEffect } from "react";
 
 export default function AnimatedCategoryHeading({ text }) {
