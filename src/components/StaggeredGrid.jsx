@@ -1,3 +1,5 @@
+// src\components\StaggeredGrid.jsx
+
 import React, { useRef, useEffect, useState } from "react";
 import MenuItem from "./MenuItem";
 
