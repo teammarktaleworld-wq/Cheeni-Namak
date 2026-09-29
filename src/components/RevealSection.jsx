@@ -1,3 +1,6 @@
+
+
+// src\components\RevealSection.jsx
 import React, { useRef, useEffect } from "react";
 
 export function RevealSection({ children, className = "", delay = 0, style = {} }) {
