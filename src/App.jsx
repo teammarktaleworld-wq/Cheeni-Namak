@@ -7,6 +7,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import Header from "./components/Header";
 import HeroBanner from "./components/HeroBanner";
 import DietaryToggle from "./components/DietaryToggle";
+
 import ReviewCarousel from "./components/ReviewCarousel";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
